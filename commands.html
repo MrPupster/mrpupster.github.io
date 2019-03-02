@@ -1,0 +1,401 @@
+<!-- НУ И ЧЕГО ТЕБЕ ЗДЕСЬ НАДО? -->
+
+<div id="customCommandsAccordion">
+    <h3>Основные</h3>
+    <div>
+
+        <style>
+            p {
+                margin-top: 0.1em;
+                margin-bottom: 0.1em;
+            }
+
+            /*             .cmd,
+            .cmd td {
+              border: 1px solid red;
+            } */
+        </style>
+
+        <label for="сustomCommand"><i class="fa fa-external-link inline pull-left"></i>
+            <a data-toggle="tooltip" title="Гугл док, доступный для зрителей, с описанием команд, данными по сабдею и прочей полезной информацией."
+                data-placement="right" class="inline pull-left" target="_blank" href="http://bit.ly/2NB75p8">Список
+                команд</a>
+            <br>
+        </label>
+
+        <div style="height: 560px; overflow: auto;">
+
+            <table class="cmd">
+
+                <tr class="textList" style="color: rgb(218, 218, 218);  background-color: #6441a5">
+                    <td style="width: 15%" align="center"><strong>
+                            <font size="3">Команды</font>
+                        </strong></td>
+                    <td style="width: 70%; vertical-align: middle" align="center"><strong>
+                            <font size="3">Описание</font>
+                        </strong></td>
+                    <td style="width: 15%; vertical-align: middle" align="center" data-toggle="tooltip" title="На модераторов кулдаун не действует. Если стрим оффлайн, кулдаун всех команд 30 секунд."><strong>
+                            <font size="3">Кулдаун</font>
+                        </strong></td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">
+                        <p>!up</p>
+                        <p>!time</p>
+                        <p>!uptime</p>
+                        <p>!game</p>
+                    </td>
+                    <td style="width: 70%; vertical-align: middle">Показывает продолжительность стрима, название игры и
+                        кол-во зрителей.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 30 секунд.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">
+                        <p>!cmd</p>
+                        <p>!commands</p>
+                        <p>!info</p>
+                        <p>!help</p>
+                    </td>
+                    <td style="width: 70%; vertical-align: middle">Перечисляет все активные команды бота.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 30 секунд.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">!history</td>
+                    <td style="width: 70%">Список игр, которые были на стриме и их продолжительность.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">!btag</td>
+                    <td style="width: 70%">Показывает BattleTag.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">!mmr</td>
+                    <td style="width: 70%">Показывает рейтинг в Overwatch.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!pubg</td>
+                    <td style="width: 70%">Показывает стату в PUBG, отдельно для каждого режима. Пишем команду и режим:
+                        solo, duo, squad, fpsolo, fpduo, fpsquad. (Стандартный режим - solo, если ничего не указывать
+                        после команды) При желании можете указать регион <u> после режима</u>, стандартный регион -
+                        Европа. Сокращения регионов: eu - Европа, as - Азия, na - Америка.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 30 секунд.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!fortnite</td>
+                    <td style="width: 70%">Показывает стату в Fortnite.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!followage</td>
+                    <td style="width: 70%">Выдает дату подписки (follow) на канал. <b> Для модераторов</b> доступна
+                        дополнительная возможность проверки: написать после команды ник для проверки подписки на этот
+                        канал, либо ник и после него название чужого канала для проверки подписки на другой канал.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!8ball</td>
+                    <td style="width: 70%">Аналог игры Magic 8 ball. Пишем команду и свой вопрос.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!chance</td>
+                    <td style="width: 70%">Выдает рандомное число от 0 до 100 в процентах. Пишем команду и текст после
+                        неё. (Вероятность, что "ваш текст" = n%)</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!slap</td>
+                    <td style="width: 70%">Выдает короткую фразу с рандомным взаимодействием с другим человеком. Пишем
+                        команду и ник цели.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!8m</td>
+                    <td style="width: 70%">Маленький ивент на 8 марта. Пишем команду и ник девушки, которую хотим
+                        поздравить.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!8mself</td>
+                    <td style="width: 70%">Маленький ивент на 8 марта. Forever alone версия.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!8mpride</td>
+                    <td style="width: 70%">Маленький ивент на 8 марта. Pride версия для настояцих мужиков. Пишем
+                        команду и ник.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">!ng</td>
+                    <td style="width: 70%">Показывает сколько дней осталось до Нового Года.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!1s</td>
+                    <td style="width: 70%">Показывает сколько дней осталось до любимого праздника всех школьников и
+                        студентов.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!blessme</td>
+                    <td style="width: 70%">Результат непредсказуем, команда находится в раннем доступе!</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!kraken</td>
+                    <td style="width: 70%">Выпускает в чат Кракена, который выдает 10 сек таймаут рандомному человеку.
+                        Призвать Кракена можно только раз в 5 минут.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 5 минут.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!offline</td>
+                    <td style="width: 70%">Показывает сколько часов/ дней/ месяцев/ лет прошло с последнего стрима.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!banme</td>
+                    <td style="width: 70%">Стандартная команда любого уважающего себя бота.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Самоубивайтесь сколько угодно.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!choice</td>
+                    <td style="width: 70%">Помогает облегчить муки выбора. Выбирает один из вариантов после команды.
+                        <u> 1-й способ использования</u> - разделять варианты с помощью союза "или";
+                        <u> 2-й способ</u> - не разделять варианты "или", но в таком случае, при вводе словосочетаний
+                        разделять слова с помощью нижнего подчеркивания "_". <u> Например</u> : !choice поесть
+                        пойти_спать - соответственно выдаст либо "поесть", либо "пойти_спать".</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!coin</td>
+                    <td style="width: 70%">Подбрасывет виртуальную монетку и выдает соответствующий результат.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">!when</td>
+                    <td style="width: 70%">Показывает когда будет следующий стрим.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!stats</td>
+                    <td style="width: 70%">Показывает кол-во написанных сообщений и время, проведенное на стриме. <u>
+                            Если написать "top" после команды</u> , то покажет топ-5 пользователей. <b> Для модераторов</b>
+                        доступна дополнительная возможность проверки других пользователей, для этого нужно напиисать
+                        ник после команды.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный,
+                        1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%">
+                        <p>!vk</p>
+                        <p>!insta</p>
+                        <p>!yt</p>
+                        <p>!discord</p>
+                    </td>
+                    <td style="width: 70%; vertical-align: middle">Выдаёт ссылки на соответствующие ресурсы.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!subday</td>
+                    <td style="width: 70%">Выдаёт актуальную информацию о статусе сабдея.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 30 секунд.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!alert</td>
+                    <td style="width: 70%">Выдаёт ссылки на Telegram-канал и паблик в ВК с анонсами стримов.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!wiki</td>
+                    <td style="width: 70%">Бот расскажет вам интересный, или не очень, а может быть и не совсем
+                        правдивый, факт, даст определение необычных слов или скинет ссылку на статью из Википедии.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 3 минуты.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!kill</td>
+                    <td style="width: 70%">Воспользуйтесь командой "!kill add", чтобы добавить себя в список игроков.
+                        Команда "!kill del" удалит Вас из списка. Чтобы испытать свою удачу, после команды !kill
+                        укажите ник другого игрока, если вам не повезёт, то жертвой станете Вы! (Чтобы начать игру, ваш
+                        противник тоже должен добавить себя в список)</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Индивидуальный, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top">!statistic</td>
+                    <td style="width: 70%">Выдаёт ссылки на сайты, где вы сможете посмотреть статистику чата и стримов.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center">Общий, 1 минута.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top; color: #393d3d">!ban</td>
+                    <td style="width: 70%; color: #393d3d">Хотите незаметно забанить человека, даже если у вас нет
+                        модерки? Бот всегда к вашим услугам! Первые 3 раза бесплатно! Затем команда работает на
+                        условиях месячной подписки. Пишем команду и ник. Не бойтесь, работяги, этот пункт модеры не
+                        видят, всё учтено. И самое важное - не забывайте о главнном правиле нашего клуба, да-да, то
+                        самое правило! (Только для работяг, никаких модераторов)</td>
+                    <td style="width: 15%; vertical-align: middle" align="center"></td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 15%; vertical-align: top; color: #393d3d">!цена</td>
+                    <td style="width: 70%; color: #393d3d">Инфа по поводу оплаты привилегий для команды !ban.</td>
+                    <td style="width: 15%; vertical-align: middle" align="center"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+
+    <h3>Сабдей</h3>
+    <div>
+
+        <label for="addCustomCommand">Список команд</label>
+        <div style="height: 70px; overflow: auto;">
+
+            <table class="cmd">
+                <tr class="textList">
+                    <td style="width: 20%">!subday</td>
+                    <td style="width: 80%">Выдаёт актуальную информацию о статусе сабдея.</td>
+                </tr>
+
+
+                <tr class="textList">
+                    <td style="width: 20%; vertical-align: top">!subday history</td>
+                    <td style="width: 80%">Показывает игры с последнего сабдея. Если после команды ввести число
+                        соответствующее номеру сабдея, то покажет игры с заданного сабдея.</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+    <h3>Для модераторов</h3>
+    <div>
+
+        <label for="addCustomCommand">Список команд</label>
+        <div style="height: 500px; overflow: auto;">
+
+            <table class="cmd">
+
+                <tr class="textList">
+                    <td style="width: 28%">!enablecom "название команды"</td>
+                    <td style="width: 72%; vertical-align: top">Включает введённую команду. Выдает соответствующее
+                        сообщение в случае успеха, если нет - воспользуйтесь командой заново.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%">!disablecom "название команды"</td>
+                    <td style="width: 72%; vertical-align: top">Отключает введённую команду. Выдает соответствующее
+                        сообщение в случае успеха, если нет - воспользуйтесь командой заново.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%; vertical-align: top">!banall "ключевая фраза"</td>
+                    <td style="width: 72%">Выдаёт массовый <u>бан (пермач)</u> по ключевой фразе или слову. <u>
+                            Например</u> : !banall спам в чате - забанит всех, кто написал в сообщении "спам в чате",
+                        независимо от позиции в сообщении и кол-ва слов, помимо ключевого.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%; vertical-align: top">!timeoutall / !timeoall / !toutall / !toall "ключевая
+                        фраза"</td>
+                    <td style="width: 72%">Выдаёт массовый <u>таймаут</u> на 1 минуту по ключевой фразе или слову. <u>
+                            Например</u> : !timeoutall спам в чате - забанит всех, кто написал в сообщении "спам в
+                        чате", независимо от позиции в сообщении и кол-ва слов, помимо ключевого. Также можете указать
+                        временной период таймаута вручную - для этого нужно ввести время в минутах после команды, но
+                        перед ключевой фразой.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%; vertical-align: top">!unbanall</td>
+                    <td style="width: 72%">Позволяет разбанить всех, кто был забанен после использования команды
+                        !banall или !timeoutall. Если после команды написать "prev" или "previous", то будут разбанены
+                        те, кто был забанен после предыдущего использования команд, если таковые имеются.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%; vertical-align: top">!pause</td>
+                    <td style="width: 72%">Временно отключает/ включает все команды бота. После команды указываем
+                        временной период в минутах, стандартно 5 мин, если ничего не указывать. Пауза не действует на
+                        модераторов.</td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 28%; vertical-align: top">!mute</td>
+                    <td style="width: 72%">Перманентно отключает/ включает все реакции бота, <u>в т.ч. модерирование
+                            чата.</u></td>
+                </tr>
+
+                <tr class="textList">
+                    <td style="width: 25%; vertical-align: top">!online</td>
+                    <td style="width: 75%">Проверяет онлайн чужого стрима. Пишем команду и название канала.</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Run the Acordion -->
+<script>
+    $("#customCommandsAccordion").accordion({
+        clearStyle: true,
+        heightStyle: "panel",
+        icons: null
+    });
+</script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+</script>
+
+<script>
+    handleInputFocus();
+</script>

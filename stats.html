@@ -1,0 +1,246 @@
+<!-- НУ И ЧЕГО ТЕБЕ ЗДЕСЬ НАДО? -->
+
+<div id="statsAccordion">
+
+	<h3>Зрители</h3>
+	<div>
+		<form role="form">
+			<div class="form-group" id="searchViewer" onkeypress="return event.keyCode != 13">
+				<label for="searchViewer"> Расширенный поиск </label>
+				<span id="searchDialog" class="inline pull-right"></span>
+				<button type="button" class="btn btn-primary inline pull-right" onclick="searchViewer()"> Найти </button>
+				<input type="text" class="form-control" id="viewerName" data-toggle="tooltip" title="Если не нашли себя в основном списке, можете попробовать поискать здесь."
+				 placeholder="Введите ник для поиска" />
+			</div>
+			<label for="viewersList" data-toggle="tooltip" title="Список пользователей с наибольшим кол-ом сообщений и времени, проведенном на стримах. Кликните на заголовок столбца, чтобы отсортировать данные по соответсвующему критерию.">Топ
+				100</label>
+			<div id="viewersList" style="height: 520px; overflow: auto;"></div>
+		</form>
+	</div>
+
+	<h3>История стримов</h3>
+	<div>
+
+		<label for="streamHistoryTable">
+			<font size="3">Список всех стримов</font>
+		</label>
+		<div class="btn-historyload inline pull-right" style="position: relative; bottom: 10px" data-toggle="modal"
+		 data-target="#historyModal" onclick="loadStreamHistory()">
+			<p> Нажми на меня </p>
+			<div class="shdw-historyload"><span> Нажимай же </span></div>
+		</div><br>
+		<td> Нажмите на кнопку справа, чтобы открыть список. </td><br>
+
+		<div id="streamHistoryTable" style="overflow: auto;"></div>
+
+		<div id="historyModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content" style="background: rgb(28, 28, 36); border-radius: 3px; height: 800px; width: 715px">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"></button>
+						<h4 class="modal-title">История всех стримов</h4>
+					</div>
+					<div class="modal-body">
+						<div id="list0"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	var xhrStreamStatus = new XMLHttpRequest();
+
+	xhrStreamStatus.onreadystatechange = function () {
+		if (xhrStreamStatus.readyState === 4 && xhrStreamStatus.status == "200") {
+			var streamStatus = JSON.parse(this.responseText);
+			if ("online" == streamStatus.status) {
+				var uptime = Math.floor((new Date().getTime() - streamStatus.startTime) / 1000),
+					hrs = (uptime / 3600 < 1 ? '' : Math.floor(uptime / 3600) + 'ч'),
+					min = ((uptime % 3600) / 60 < 1 ? '' : hrs === '' ? Math.floor((uptime % 3600) / 60) + 'м' : ' ' + Math.floor((
+						uptime % 3600) / 60) + 'м');
+				$('#logo').addClass('online');
+				$('#streamOnline').html(
+					"<span class=\"greenPill\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Стри онлайн\"><i class=\"fa fa-twitch fa-lg\" style=\"margin-right: 5px\"/> " +
+					hrs + min + "</span>");
+			} else {
+				$('#streamOnline').html('');
+			}
+			$('#streamHistoryTable').html('<br><br><ul>' +
+				'<li>' + streamStatus.offline + '</li><br>' +
+				'<li>Игры на прошлом стриме:  ' + streamStatus.games.replace(/%26/g, '&') + '</li>' +
+				'</ul>');
+			$('#streamHistoryTable').data('row', streamStatus.row);
+			$('#subdayStatus').data('status', streamStatus.subday);
+			subdayMain();
+		}
+	};
+	xhrStreamStatus.open("GET", "./json/streamStatus.json", true);
+	xhrStreamStatus.send();
+
+	var xhrViewerStats = new XMLHttpRequest();
+
+	xhrViewerStats.onreadystatechange = function () {
+		if (xhrViewerStats.readyState === 4 && xhrViewerStats.status == "200") {
+			var viewerData = JSON.parse(this.responseText),
+
+				htmlHeader = "",
+				htmlData = [];
+
+			htmlHeader = "<table class='CLASS_STRING' data-paging='true' data-paging-size='14'" +
+				"       data-filtering='true' data-filter-delay='200'" +
+				"       data-sorting='true'" +
+				"       data-paging-count-format='Rows {PF}-{PL} / {TR}' data-show-header='true'>" +
+				"<thead><tr>" +
+				"    <th data-breakpoints='xs'>Пользователь</th>" +
+				"    <th data-type='Date'>Времени на стримах (д:ч:м)</th>" +
+				"    <th data-type='number'>Кол-во сообщений</th>" +
+				"</tr></thead><tbody>";
+
+
+			htmlData["1"] = htmlHeader.replace('CLASS_STRING', 'table_1');
+
+			for (var idx in viewerData['results']) {
+				var user = viewerData['results'][idx]['key'],
+					time = viewerData['results'][idx]['value'],
+					msg = viewerData['results'][idx]['msg'];
+				htmlData["1"] +=
+					"<tr class=\"textList\">" +
+					"    <td style='width: 40%'>" + user + "</td>" +
+					"    <td style='width: 35%'>" + secsToDurationStr(time) + "</td>" +
+					"    <td style='width: 25%'>" + msg + "</td>";;
+				htmlData["1"] += "</tr>";
+			}
+			htmlData["1"] += "</tbody></table>";
+			$("#viewersList").html(htmlData["1"]);
+			$('.table_1').footable();
+
+		}
+
+	};
+	xhrViewerStats.open("GET", "./json/viewersStats.json", true);
+	xhrViewerStats.send();
+
+	function searchViewer() {
+		var name = $('#viewerName').val().trim().toLowerCase();
+		if (name === '') return;
+
+		var xhrViewerStatsExt = new XMLHttpRequest();
+
+		xhrViewerStatsExt.onreadystatechange = function () {
+			if (xhrViewerStatsExt.readyState === 4 && xhrViewerStatsExt.status == "200") {
+				var viewerData = JSON.parse(this.responseText),
+					success = false,
+					user = name,
+					time = '',
+					msg = '';
+				for (var i in viewerData['results']) {
+					if (name === viewerData['results'][i]['key']) {
+						user = viewerData['results'][i]['key'];
+						time = viewerData['results'][i]['value'];
+						msg = viewerData['results'][i]['msg'];
+						success = true;
+					}
+				}
+				showDialog(success, user, time, msg);
+			}
+
+		};
+		xhrViewerStatsExt.open("GET", "./json/viewersStatsExtended.json", true);
+		xhrViewerStatsExt.send();
+	}
+
+	function showDialog(success, user, time, msg) {
+		if (success) {
+			// 			$("#searchDialog").css("white-space","pre-wrap");
+			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
+			$("#searchDialog").html('<ul>' +
+				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
+				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
+				'</ul>');
+			$("#searchDialog").dialog({
+				autoOpen: true,
+				height: 150,
+				width: 400,
+				show: {
+					effect: "blind",
+					duration: 400
+				},
+				title: user
+			});
+		} else {
+			$("#searchDialog").text('');
+			$("#searchDialog").dialog({
+				autoOpen: true,
+				height: 1,
+				width: 400,
+				show: {
+					effect: "blind",
+					duration: 400
+				},
+				title: user + ' не найден'
+			});
+		}
+	}
+
+	function loadStreamHistory() {
+		var row = $('#streamHistoryTable').data('row'),
+			streamHistory = "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRxendKNyKxT1g33xOp9K-Nww3bz6qOonruI" +
+			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
+			"headers=false&amp;range=A1:B" + row + "\" " +
+			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
+			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
+		$('#list0').html(streamHistory);
+	}
+
+	function secsToDurationStr(secondsStr) {
+		var seconds = parseInt(secondsStr),
+			years = 0,
+			months = 0,
+			days = 0,
+			hours = 0,
+			minutes = 0,
+			durationStr = "",
+			pad = function (i) {
+				return (i < 10 ? '0' + i : i)
+			};
+
+		if (seconds > 86400) { // Day: 60 * 60 * 24
+			days = seconds / 86400;
+			seconds = seconds % 86400;
+			durationStr += pad(Math.floor(days)) + ":";
+		} else {
+			durationStr += "00:";
+		}
+
+		if (seconds > 3600) { // Minutes: 60 * 60
+			hours = seconds / 3600;
+			seconds = seconds % 3600;
+			durationStr += pad(Math.floor(hours)) + ":";
+		} else {
+			durationStr += "00:";
+		}
+
+		minutes = seconds / 60;
+		durationStr += pad(Math.floor(minutes));
+		return durationStr + '  |  (' + Math.floor(secondsStr / 3600) + ' ч)';
+	}
+</script>
+<!-- Run the Acordion -->
+<script>
+	$("#statsAccordion").accordion({
+		clearStyle: true,
+		heightStyle: "panel",
+		icons: null
+	});
+</script>
+<script>
+	$('[data-toggle="tooltip"]').tooltip({
+		trigger: 'hover'
+	});
+</script>
+<script>
+	handleInputFocus();
+</script>

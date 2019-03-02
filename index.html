@@ -1,0 +1,178 @@
+<!-- НУ И ЧЕГО ТЕБЕ ЗДЕСЬ НАДО? -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>MoskalBot</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./common/js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/footable/footable.standalone.min.css">
+
+    <script src="./common/js/jquery-ui/external/jquery/jquery.min.js"></script>
+    <script src="./common/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./js/flot/jquery.flot.min.js"></script>
+    <script src="./js/ion-sound/js/ion.sound.min.js"></script>
+    <script src="./js/footable/footable.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./js/dateFormat.js"></script>
+    <script type="text/javascript" src="./js/panelConfig.js"></script>
+    <script type="text/javascript" src="./js/panelUtils.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="logo">
+            <img id="logo" src="common/images/logo.jpg" />
+        </div>
+        <h1 id="logo" style="position: relative; margin-top: 20px; margin-left: 25px; margin-right: 80px;" class="twitch">MoskalBot</h1>
+
+        <!--             <script type='text/JavaScript'>
+                function verocultar(cual) {
+                     if(cual.innerText=='Отобразить чат') {
+                        cual.innerText='Скрыть чат';
+                     } else {
+                        cual.innerText='Отобразить чат';
+                     }
+                     return false;
+                }
+            </script>
+            <button type="button" class="btn btn-test inline pull-left" style="margin-top: 38px; margin-left: 30px"  onclick="$.toggleTwitchChat(); return verocultar(this);"
+            href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Спрятать/ восстановить чат.">Скрыть чат</button>
+
+            <button type="button" class="btn btn-primary inline pull-left" style="margin-top: 38px; " onclick="$.toggleTwitchPlayer()" 
+            data-toggle="tooltip" data-placement="bottom" title="Спрятать/ восстановить плеер.">Скрыть плеер</button>              -->
+
+        <td class="block inline pull-left"> <span id="streamOnline" style="position: relative; top: 45px; margin-left: 20px"></span>
+        </td>
+    </div>
+
+    <span id="panelLoader"><i style="color: #6441a5" class="fa fa-spinner fa-spin fa-5x"></i><br><br>Загрузка
+        информации</span>
+
+
+    <div id="tabs" style="display:none">
+        <ul>
+            <li> <a href="#commands">Команды</a> </li>
+            <li> <a href="#stats">Статистика</a> </li>
+            <li> <a href="#subday">Сабдей</a> </li>
+            <li> <a href="#help">Информация</a> </li>
+        </ul>
+
+        <div role="tabpanel" class="tab-pane" id="commands">
+            <div id="commandsPanel"></div>
+            <script type="text/javascript">
+                $("#commandsPanel").load("commands.html");
+            </script>
+            <!-- <script type="text/javascript" src="./js/commandsPanel.js"></script>                 -->
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="stats">
+            <div id="statsPanel"></div>
+            <script type="text/javascript">
+                $("#statsPanel").load("stats.html");
+            </script>
+            <!--                 <script type="text/javascript" src="./js/statsPanel.js" async></script> -->
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="subday">
+            <div id="subdayPanel"></div>
+            <script type="text/javascript">
+                $("#subdayPanel").load("subday.html");
+            </script>
+            <!--                 <script type="text/javascript" src="./js/subdayPanel.js" async></script> -->
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane" id="help">
+            <div id="helpPanel"></div>
+            <script type="text/javascript">
+                $("#helpPanel").load("help.html");
+            </script>
+            <!-- <script type="text/javascript" src="./js/helpPanel.js"></script> -->
+        </div>
+    </div>
+
+    <script>
+        $('#tabs').tabs().addClass('ui-tabs-vertical ui-helper-clearfix').fadeIn(1000);
+        TABS_INITIALIZED = true;
+        $("#panelLoader").fadeOut(1000);
+    </script>
+    <!--         <script type="text/javascript" src="./js/globalPanel.js" async></script>         -->
+
+    <!-- <div class="ui-widget-content"  id="playersidebar" name="player">
+            <div id="chatsidebar-header" class="ui-widget-header" >
+                <div class="button" style="float: left; padding-left: 5px;"  onclick="$.toggleTwitchPlayer()" data-toggle="tooltip" title="Нажмите, чтобы скрыть плеер. Зажмите кнопку или область справа от неё и двигайте мышкой, чтобы перетащить.">
+                   <i class="fa fa-bars"></i>
+               </div>
+            </div> 
+           
+               <script>
+                $("#playersidebar").append("<iframe id=\"player\" frameborder=\"0\" scrolling=\"no\" height=\"332\" width=\"590\"" +
+                                         "src=\"https://player.twitch.tv/?channel=" + getChannelName().toLowerCase() + "&autoplay=false\">");
+                /*$("#chat").hide(); ** This breaks things in firefox. */
+                $("#playersidebar").draggable({ iframeFix: true });
+            </script>
+        </div> -->
+
+    <!-- <script type="text/javascript"> 
+            function changeFrame() {
+                var width = document.body.clientWidth;
+                if (width >= 1300) {
+                    $("body").append(
+                    "<div class=\"ui-widget-content\" id=\"chatsidebar\" name=\"chat\" >" +
+                        "<div id=\"chatsidebar-header\" class=\"ui-widget-header\" >" +
+                            "<div class=\"button\" style=\"float: left; padding-left: 5px;\"  onclick=\"$.toggleTwitchChat()\" data-toggle=\"tooltip\" title=\"Нажмите, чтобы скрыть чат. Зажмите кнопку или область справа от неё и двигайте мышкой, чтобы перетащить.\">" +
+                                "<i class=\"fa fa-bars\"></i>" +
+                            "</div>" +
+                        "</div>");
+                    $("#chatsidebar").append("<iframe id=\"chat\" frameborder=\"0\" scrolling=\"no\" onload=\"hideLoadingImage()\"" +
+                                                    "src=\"https://www.twitch.tv/embed/" + getChannelName().toLowerCase() + "/chat?darkpopout\">");
+                    /*$("#chat").hide(); ** This breaks things in firefox. */
+                    $("#chatsidebar").draggable({ iframeFix: true });
+                    $("body").append("</div>");
+                } else {
+                    $("body").append(
+                    "<div class=\"ui-widget-content\" id=\"chatsidebarm\" name=\"chat\" >" +
+                        "<div id=\"chatsidebarm-header\" class=\"ui-widget-header\" >" +
+                            "<div class=\"button\" style=\"float: left; padding-left: 5px;\"  onclick=\"$.toggleTwitchChat()\" data-toggle=\"tooltip\" title=\"Нажмите, чтобы скрыть чат. Зажмите кнопку или область справа от неё и двигайте мышкой, чтобы перетащить.\">" +
+                                "<i class=\"fa fa-bars\"></i>" +
+                            "</div>" +
+                        "</div>");
+                    $("#chatsidebarm").append("<iframe id=\"chat\" frameborder=\"0\" scrolling=\"no\" onload=\"hideLoadingImage()\"" +
+                                                    "src=\"https://www.twitch.tv/embed/" + getChannelName().toLowerCase() + "/chat?darkpopout\">");
+                    /*$("#chat").hide(); ** This breaks things in firefox. */
+                    $("#chatsidebarm").draggable({ iframeFix: true });
+                    $("body").append("</div>");
+                }
+            }
+            changeFrame();
+        </script>  -->
+
+    <br>
+    <br>
+
+
+    <script>
+        $('[data-toggle="tooltip"]').tooltip({
+            trigger: 'hover'
+        });
+    </script>
+
+</body>
+
+</html>
