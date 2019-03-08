@@ -99,6 +99,7 @@
 				"       data-sorting='true'" +
 				"       data-paging-count-format='Rows {PF}-{PL} / {TR}' data-show-header='true'>" +
 				"<thead><tr>" +
+				"    <th data-breakpoints='xs'>#</th>" +
 				"    <th data-breakpoints='xs'>Пользователь</th>" +
 				"    <th data-type='Date'>Времени на стримах (д:ч:м)</th>" +
 				"    <th data-type='number'>Кол-во сообщений</th>" +
@@ -113,7 +114,8 @@
 					msg = viewerData['results'][idx]['msg'];
 				htmlData["1"] +=
 					"<tr class=\"textList\">" +
-					"    <td style='width: 40%'>" + user + "</td>" +
+					"    <td style='width: 5%'>" + idx+1 + "</td>" +
+					"    <td style='width: 35%'>" + user + "</td>" +
 					"    <td style='width: 35%'>" + secsToDurationStr(time) + "</td>" +
 					"    <td style='width: 25%'>" + msg + "</td>";;
 				htmlData["1"] += "</tr>";
