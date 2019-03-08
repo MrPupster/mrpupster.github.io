@@ -240,7 +240,7 @@
 
 	xhrFollowage.onreadystatechange = function () {
 		if (xhrFollowage.readyState === 4 && xhrFollowage.status == "200") {
-			var followage = JSON.parse(this.responseText);
+			var followage = this.responseText;
 			alert(followage);
 		}
 	};
