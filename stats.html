@@ -243,19 +243,36 @@
 		
 		xhrFollowAge.onreadystatechange = function () {
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
-				var followDateRaw = this.responseText.replace('.', '');
-				var followDate = followDateRaw.slice(0, followDateRaw.indexOf('-'));
+				var followDateRaw = this.responseText.replace('.', ''),
+				    followDate = followDateRaw.slice(0, followDateRaw.indexOf('-'));
 // 				var date = new Date("Jan 25 2015");
 // 				var local = date.toLocaleDateString('ru', options);
 // 				var time = Date.parse(date);
 // 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
 				moment.lang('ru');
-				followAge = moment(followDate).format('Do MMMM, YYYY') + ' | ' + moment.duration(moment().diff(moment(followDate))).asDays();
+				followAge = moment(followDate).format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
 		xhrFollowAge.send();
 		return followAge;
+	}
+	
+	function daysAmount(date) {
+		var daysRaw = Math.floor(moment.duration(moment().diff(moment(date))).asDays()),
+		    digitNew = daysRaw % 100,    
+		    lastFigure = digitNew % 10,
+		    days;
+		if (digitNew > 10 && digitNew < 20) {
+                 	days = daysRaw + 'дней';
+                } else if (lastFigure == 1) {
+                	days = daysRaw + 'день';
+                } else if (lastFigure > 1 && lastFigure < 5) {
+                	days = daysRaw + 'дня';
+                } else {
+			days = daysRaw + 'дней';
+                }
+		return days;
 	}
 	
 </script>
