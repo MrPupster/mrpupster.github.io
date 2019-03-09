@@ -163,11 +163,11 @@
 		if (success) {
 			// 			$("#searchDialog").css("white-space","pre-wrap");
 			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
-			var followAge = getFollowAge(user); 
+			var follow = getFollowAge(user); 
 			$("#searchDialog").html('<ul>' +
 				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
 				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
-				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
+				'<li>Дата подписки (follow) - ' + follow + '</li><br>' +
 				'</ul>');
 			$("#searchDialog").dialog({
 				autoOpen: true,
@@ -238,16 +238,19 @@
 	}
 	
 	function getFollowAge(user) {
+		var q;
 		var xhrFollowAge = new XMLHttpRequest();
-
-	xhrFollowAge.onreadystatechange = function () {
-		if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
-			var followAge = this.responseText.replace('.', '');
-			return followAge;
-		} else return null;
-	};
-	xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, true);
-	xhrFollowAge.send();
+		
+		xhrFollowAge.onreadystatechange = function () {
+			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
+				var followAge = this.responseText.replace('.', '');
+				q = followAge;
+				
+			} else return null;
+		};
+		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, true);
+		xhrFollowAge.send();
+		return followAge + ' | ' + q;
 	}
 	
 </script>
