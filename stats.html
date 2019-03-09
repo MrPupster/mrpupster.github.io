@@ -244,7 +244,7 @@
 		xhrFollowAge.onreadystatechange = function () {
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
 				var followDateRaw = this.responseText.replace('.', '');
-				var followDate = followDateRaw.slice(followDateRaw.indexOf('-'));
+				var followDate = followDateRaw.slice(0, followDateRaw.indexOf('-'));
 // 				var date = new Date("Jan 25 2015");
 // 				var local = date.toLocaleDateString('ru', options);
 // 				var time = Date.parse(date);
