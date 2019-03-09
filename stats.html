@@ -1,6 +1,7 @@
 <!-- НУ И ЧЕГО ТЕБЕ ЗДЕСЬ НАДО? -->
 
 <div id="statsAccordion">
+	<style>.ui-dialog-content{text-align: left}</style>
 
 	<h3>Зрители</h3>
 	<div>
@@ -163,12 +164,12 @@
 			// 			$("#searchDialog").css("white-space","pre-wrap");
 			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
 			let followAge = getFollowAge(user); 
-			$("#searchDialog class='pull-left'").html('<ul class="inline pull-left">' +
+			$("#searchDialog class='pull-left'").html('<ul>' +
 				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
 				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
 				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
 				'</ul>');
-			$("#searchDialog class='pull-left'").dialog({
+			$("#searchDialog").dialog({
 				autoOpen: true,
 // 				height: 200,
 				width: 550,
