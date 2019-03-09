@@ -163,11 +163,11 @@
 		if (success) {
 			// 			$("#searchDialog").css("white-space","pre-wrap");
 			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
-			var follow = getFollowAge(user); 
+			let followAge = getFollowAge(user); 
 			$("#searchDialog").html('<ul>' +
 				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
 				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
-				'<li>Дата подписки (follow) - ' + follow + '</li><br>' +
+				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
 				'</ul>');
 			$("#searchDialog").dialog({
 				autoOpen: true,
@@ -238,18 +238,18 @@
 	}
 	
 	function getFollowAge(user) {
-		var q = '?';
+		var followAge;
 		var xhrFollowAge = new XMLHttpRequest();
 		
 		xhrFollowAge.onreadystatechange = function () {
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
-				var followAge = this.responseText.replace('.', '');
-				q = followAge;
+				var followDate = this.responseText.replace('.', '');
+				followAge  = $.datepicker.formatDate("M d, yy", new Date(followDate));
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
 		xhrFollowAge.send();
-		return q + ' |';
+		return followAge;
 	}
 	
 </script>
