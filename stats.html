@@ -163,7 +163,7 @@
 			// 			$("#searchDialog").css("white-space","pre-wrap");
 			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
 			let followAge = getFollowAge(user); 
-			$("#searchDialog").html('<ul>' +
+			$("#searchDialog").html('<ul align="left">' +
 				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
 				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
 				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
@@ -171,7 +171,7 @@
 			$("#searchDialog").dialog({
 				autoOpen: true,
 // 				height: 200,
-// 				width: 450,
+				width: 450,
 				show: {
 					effect: "blind",
 					duration: 400
