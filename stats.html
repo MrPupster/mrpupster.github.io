@@ -249,7 +249,8 @@
 // 				var local = date.toLocaleDateString('ru', options);
 // 				var time = Date.parse(date);
 // 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
-				followAge = moment().format('YYYY-MM-DDTh:mm:ss+0000');
+				moment.lang('ru');
+				followAge = moment().format('LLLL');
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
