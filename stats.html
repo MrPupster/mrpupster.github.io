@@ -113,7 +113,7 @@
 					time = viewerData['results'][idx]['value'],
 					msg = viewerData['results'][idx]['msg'];
 				htmlData["1"] +=
-					"<tr class=\"textList\">" +
+					"<tr onclick='alert(\""+user+"\")' class=\"textList\">" +
 					"    <td style='width: 5%'>" + (Number(idx)+1) + "</td>" +
 					"    <td style='width: 35%'>" + user + "</td>" +
 					"    <td style='width: 35%'>" + secsToDurationStr(time) + "</td>" +
