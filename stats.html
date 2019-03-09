@@ -114,7 +114,7 @@
 					msg = viewerData['results'][idx]['msg'];
 				htmlData["1"] +=
 					"<tr class=\"textList\">" +
-					"    <td onclick='alert(\""+user+"\")' style='cursor: pointer; width: 5%'>" + (Number(idx)+1) + "</td>" +
+					"    <td onclick='getFollowAge(\""+user+"\")' style='cursor: pointer; width: 5%'>" + (Number(idx)+1) + "</td>" +
 					"    <td style='width: 35%'>" + user + "</td>" +
 					"    <td style='width: 35%'>" + secsToDurationStr(time) + "</td>" +
 					"    <td style='width: 25%'>" + msg + "</td>";;
@@ -235,17 +235,17 @@
 		return durationStr + '  |  (' + Math.floor(secondsStr / 3600) + ' ч)';
 	}
 	
-	function getFollowage() {
-		var xhrFollowage = new XMLHttpRequest();
+	function getFollowAge(user) {
+		var xhrFollowAge = new XMLHttpRequest();
 
-	xhrFollowage.onreadystatechange = function () {
-		if (xhrFollowage.readyState === 4 && xhrFollowage.status == "200") {
-			var followage = this.responseText;
-			alert(followage.replace('.', ''));
+	xhrFollowAge.onreadystatechange = function () {
+		if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
+			var followAge = this.responseText.replace('.', '');
+			alert(followAge);
 		}
 	};
-	xhrFollowage.open("GET", "https://decapi.me/twitch/followed?channel=twitch&user=decicus", true);
-	xhrFollowage.send();
+	xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, true);
+	xhrFollowAge.send();
 	}
 </script>
 <!-- Run the Acordion -->
