@@ -250,12 +250,12 @@
 // 				var time = Date.parse(date);
 // 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
 				moment.lang('ru');
-				followAge = moment(date);
+				followAge = moment(date) + ' | ' + date;
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
 		xhrFollowAge.send();
-		return followAge + ' | ' + date;
+		return followAge;
 	}
 	
 </script>
