@@ -243,14 +243,14 @@
 		
 		xhrFollowAge.onreadystatechange = function () {
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
-				var followDate = this.responseText.replace('.', '');
+				var followDate = this.responseText.replace('.', '').slice();
 // 				var options = {year: 'numeric', month: 'long', day: 'numeric' };
 				var date = new Date("Jan 25 2015");
 // 				var local = date.toLocaleDateString('ru', options);
 // 				var time = Date.parse(date);
 // 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
 				moment.lang('ru');
-				followAge = moment(date) + ' | ' + date;
+				followAge = moment("Jan 25 2015").format('YYYY-MM-DD') + ' | ' + date;
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
