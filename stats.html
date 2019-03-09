@@ -114,7 +114,7 @@
 					msg = viewerData['results'][idx]['msg'];
 				htmlData["1"] +=
 					"<tr class=\"textList\">" +
-					"    <td onclick='getFollowAge(\""+user+"\")' style='cursor: pointer; width: 5%'>" + (Number(idx)+1) + "</td>" +
+					"    <td onclick='showDialog(\""+true+"\", \""+user+"\", \""+time+"\", \""+msg+"\")' style='cursor: pointer; width: 5%'>" + (Number(idx)+1) + "</td>" +
 					"    <td style='width: 35%'>" + user + "</td>" +
 					"    <td style='width: 35%'>" + secsToDurationStr(time) + "</td>" +
 					"    <td style='width: 25%'>" + msg + "</td>";;
@@ -163,9 +163,11 @@
 		if (success) {
 			// 			$("#searchDialog").css("white-space","pre-wrap");
 			// 			$("#searchDialog").text('Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + ' \n ' + ' \n ' + 'Кол-во сообщений - ' + msg);
+			let followAge = getFollowAge(user); 
 			$("#searchDialog").html('<ul>' +
 				'<li>Времени на стримах (д:ч:м) - ' + secsToDurationStr(time) + '</li><br>' +
 				'<li>Кол-во сообщений - ' + msg + '</li><br>' +
+				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
 				'</ul>');
 			$("#searchDialog").dialog({
 				autoOpen: true,
@@ -241,12 +243,13 @@
 	xhrFollowAge.onreadystatechange = function () {
 		if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
 			var followAge = this.responseText.replace('.', '');
-			alert(followAge);
-		}
+			return followAge;
+		} else return null;
 	};
 	xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, true);
 	xhrFollowAge.send();
 	}
+	
 </script>
 <!-- Run the Acordion -->
 <script>
