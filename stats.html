@@ -245,12 +245,12 @@
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
 				var followAge = this.responseText.replace('.', '');
 				q = followAge;
-				return q + ' |';
+				alert(q);
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, true);
 		xhrFollowAge.send();
-		
+		return q + ' |';
 	}
 	
 </script>
