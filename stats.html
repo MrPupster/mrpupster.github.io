@@ -245,7 +245,7 @@
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
 				var followDate = this.responseText.replace('.', '');
 // 				var options = {year: 'numeric', month: 'long', day: 'numeric' };
-				var date = new Date("Jan 25 2015 - 10:28:10 PM (UTC)");
+				var date = +new Date("Jan 25 2015 - 10:28:10 PM (UTC)");
 // 				var local = date.toLocaleDateString('ru', options);
 // 				var time = Date.parse(date);
 // 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
