@@ -171,8 +171,8 @@
 				'</ul>');
 			$("#searchDialog").dialog({
 				autoOpen: true,
-				height: 150,
-				width: 400,
+				height: 200,
+				width: 450,
 				show: {
 					effect: "blind",
 					duration: 400
@@ -264,13 +264,13 @@
 		    lastFigure = digitNew % 10,
 		    days;
 		if (digitNew > 10 && digitNew < 20) {
-                 	days = daysRaw + 'дней';
+                 	days = daysRaw + ' дней';
                 } else if (lastFigure == 1) {
-                	days = daysRaw + 'день';
+                	days = daysRaw + ' день';
                 } else if (lastFigure > 1 && lastFigure < 5) {
-                	days = daysRaw + 'дня';
+                	days = daysRaw + ' дня';
                 } else {
-			days = daysRaw + 'дней';
+			days = daysRaw + ' дней';
                 }
 		return days;
 	}
