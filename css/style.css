@@ -11,6 +11,10 @@
     --hyperlinks: #6441a5;
 }
 
+.ui-dialog-content {
+    float: left!important
+}
+
 #list0  p {
     font: arial;
     font-size: 14px;
