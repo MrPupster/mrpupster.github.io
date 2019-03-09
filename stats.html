@@ -245,7 +245,7 @@
 			if (xhrFollowAge.readyState === 4 && xhrFollowAge.status == "200") {
 				var followDate = this.responseText.replace('.', '');
 				var options = {year: 'numeric', month: 'long', day: 'numeric' };
-				followAge  = new Date().toLocaleDateString('ru', options);
+				followAge  = new Date(followDate).toLocaleDateString('ru-RU', options);
 			} else return null;
 		};
 		xhrFollowAge.open("GET", "https://decapi.me/twitch/followed?channel=t2x2&user=" + user, false);
