@@ -583,17 +583,17 @@ td {
 .ui-state-focus {
     outline: none;
 }
-.ui-tabs {
+.ui-tabs-vaertical {
     width: 55em;
 }
-.ui-tabs .ui-tabs-nav {
+/* .ui-tabs-vaertical .ui-tabs-nav {
     padding: .2em .1em .2em .2em;
     float: left;
     width: 12em;
     border-style: none;
     background: none;
 }
-/* .ui-tabs-vertical .ui-tabs-nav li {
+.ui-tabs-vertical .ui-tabs-nav li {
     clear: left;
     width: 100%;
     border-bottom-width: 1px !important;
