@@ -583,10 +583,10 @@ td {
 .ui-state-focus {
     outline: none;
 }
-.ui-tabs-vertical {
+.ui-tabs {
     width: 55em;
 }
-.ui-tabs-vertical .ui-tabs-nav {
+.ui-tabs .ui-tabs-nav {
     padding: .2em .1em .2em .2em;
     float: left;
     width: 12em;
