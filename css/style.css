@@ -580,7 +580,7 @@ td {
     padding-bottom: 5px;
     padding-left: 5px;
 }
-/* .ui-state-focus {
+.ui-state-focus {
     outline: none;
 }
 .ui-tabs-vertical {
@@ -593,7 +593,7 @@ td {
     border-style: none;
     background: none;
 }
-.ui-tabs-vertical .ui-tabs-nav li {
+/* .ui-tabs-vertical .ui-tabs-nav li {
     clear: left;
     width: 100%;
     border-bottom-width: 1px !important;
