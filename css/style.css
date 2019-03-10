@@ -568,7 +568,7 @@ td {
     border: none;
     background: var(--main-background);
 }
-.tab-pane {
+/* .tab-pane {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -634,7 +634,7 @@ td {
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     float: none;
-}
+} */
 
 .ui-draggable .ui-dialog-titlebar {
     background: transparent;
