@@ -593,7 +593,7 @@ td {
     border-style: none;
     background: none;
 }
-/* .ui-tabs-vertical .ui-tabs-nav li {
+.ui-tabs-vertical .ui-tabs-nav li {
     clear: left;
     width: 100%;
     border-bottom-width: 1px !important;
@@ -621,7 +621,7 @@ td {
 }
 .ui-tabs-vertical .ui-tabs-panel {
     padding: 1em;
-    float: left;
+/*     float: left; */
     width: 55em;
 }
 .ui-tabs-vertical .ui-tabs-nav .ui-state-hover, .ui-state-focus {
@@ -634,7 +634,7 @@ td {
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     float: none;
-} */
+} 
 
 .ui-draggable .ui-dialog-titlebar {
     background: transparent;
