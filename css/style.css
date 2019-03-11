@@ -12,7 +12,7 @@
 }
 
 .ui-dialog-content {
-    float: left!important
+    float: left!important;
 }
 
 #list0  p {
@@ -568,7 +568,7 @@ td {
     border: none;
     background: var(--main-background);
 }
-.tab-panel {
+.tab-pane {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -583,10 +583,10 @@ td {
 .ui-state-focus {
     outline: none;
 }
-.ui-tabs-vaertical {
+.ui-tabs-vertical {
     width: 55em;
 }
-.ui-tabs-vaertical .ui-tabs-nav {
+.ui-tabs-vertical .ui-tabs-nav {
     padding: .2em .1em .2em .2em;
     float: left;
     width: 12em;
@@ -623,7 +623,6 @@ td {
     padding: 1em;
     float: left;
     width: 55em;
-/*     width: 742px; */
 }
 .ui-tabs-vertical .ui-tabs-nav .ui-state-hover, .ui-state-focus {
     border-color: var(--ui-state-hover-border);
@@ -635,7 +634,7 @@ td {
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     float: none;
-} 
+}
 
 .ui-draggable .ui-dialog-titlebar {
     background: transparent;
