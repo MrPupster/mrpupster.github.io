@@ -583,13 +583,13 @@ td {
 .ui-state-focus {
     outline: none;
 }
-.ui-tabs-vaertical {
-/*     width: 55em; */
-}
+/* .ui-tabs-vaertical {
+    width: 55em;
+} */
 .ui-tabs-vaertical .ui-tabs-nav {
     padding: .2em .1em .2em .2em;
     float: left;
-    width: 10em;
+    width: 12em;
     border-style: none;
     background: none;
 }
@@ -622,8 +622,8 @@ td {
 .ui-tabs-vertical .ui-tabs-panel {
     padding: 1em;
     float: left;
-/*     width: 55em; */
-    width: 742px;
+    width: 55em;
+/*     width: 742px; */
 }
 .ui-tabs-vertical .ui-tabs-nav .ui-state-hover, .ui-state-focus {
     border-color: var(--ui-state-hover-border);
