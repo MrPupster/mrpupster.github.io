@@ -1078,7 +1078,7 @@ form-control {
 }
 
 /* Overrides for FooTable */
-.footable .pagination > li > a,
+/* .footable .pagination > li > a,
 .footable .pagination > li > span {
     position: relative;
     float: left;
@@ -1121,5 +1121,5 @@ form-control {
     cursor: not-allowed;
     background-color: #000;
     border-color: grey;
-}
+} */
 
