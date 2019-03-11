@@ -568,7 +568,7 @@ td {
     border: none;
     background: var(--main-background);
 }
-.tab-pane {
+.tab-panel {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
