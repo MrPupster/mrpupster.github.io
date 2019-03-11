@@ -584,7 +584,7 @@ td {
     outline: none;
 }
 .ui-tabs-vaertical {
-    width: 55em;
+/*     width: 55em; */
 }
 .ui-tabs-vaertical .ui-tabs-nav {
     padding: .2em .1em .2em .2em;
