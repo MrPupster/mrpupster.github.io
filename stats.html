@@ -205,13 +205,14 @@
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
 				$('#list0').albeTimeline(streamHistory, {
+					effect: 'fadeInUp',
 					language: "en-US",
 					formatDate: 'd MMM'
 				});;
 			}
 
 		};
-		xhrStreamHistory.open("GET", "./json/streamHistory.json", false);
+		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
 		
 	}
