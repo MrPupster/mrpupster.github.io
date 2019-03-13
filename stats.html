@@ -205,11 +205,11 @@
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
-				$('iframe')[0].albeTimeline(streamHistory, {
+				$('iframe')[0].contentDocument.write.albeTimeline(streamHistory, {
 					sortDesc: false,
 					language: "en-US",
 					formatDate: 'd MMM'
-				});;
+				});
 			}
 
 		};
