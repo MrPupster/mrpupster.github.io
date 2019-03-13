@@ -205,7 +205,7 @@
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
-				var context = $('iframe')[0].contentWindow.document;
+				var context = $('#myiframeid').contentWindow.document;
     var $body = $('body', context);
 				$body.albeTimeline(streamHistory, {
 					sortDesc: false,
