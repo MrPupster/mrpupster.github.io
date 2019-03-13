@@ -45,7 +45,7 @@
 						<h4 class="modal-title">История прошлых стримов</h4>
 					</div>
 					<div class="modal-body">
-						<div id="list0"></div>
+						<div id="list0" style="overflow: auto; height:500px"></div>
 <!-- 						<iframe height="530" id="myiframeid"></iframe> -->
 					</div>
 				</div>
@@ -193,7 +193,7 @@
 		}
 	}
 
-// 	function loadStreamHistory() {
+	function loadStreamHistory() {
 // 		var row = $('#streamHistoryTable').data('row'),
 // 			streamHistory = "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRxendKNyKxT1g33xOp9K-Nww3bz6qOonruI" +
 // 			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
@@ -208,7 +208,7 @@
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
 				
-				$("#streamHistoryTable").albeTimeline(streamHistory, {
+				$("#list0").albeTimeline(streamHistory, {
 					sortDesc: false,
 					language: "en-US",
 					formatDate: 'd MMM'
@@ -221,7 +221,7 @@
 // 		("#streamHistoryTable").html(document.getElementById('list0').innerHTML = "<p><iframe src=\"https://albejr.github.io/jquery-albe-timeline/templates/simple/index.html\" frameborder=\"0\" height=\"830\" width=\"99%\"></iframe></p>");
 		
 		
-// 	}
+	}
 
 	function secsToDurationStr(secondsStr) {
 		var seconds = parseInt(secondsStr),
