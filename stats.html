@@ -35,7 +35,7 @@
 		</div><br>
 		<td> Нажмите на кнопку справа, чтобы открыть список. </td><br>
 
-		<div id="streamHistoryTable" style="overflow: auto;"></div>
+		<div id="streamHistoryTable" style="overflow: auto;" height="500px"></div>
 
 		<div id="historyModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
@@ -202,24 +202,23 @@
 // 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
 		
 		
-// 		var xhrStreamHistory = new XMLHttpRequest();
+		var xhrStreamHistory = new XMLHttpRequest();
 
-// 		xhrStreamHistory.onreadystatechange = function () {
-// 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
-// 				var streamHistory = JSON.parse(this.responseText);
-// 				var context = $('#myiframeid').contentWindow.document;
-//     var $body = $('body', context);
-// 				$body.albeTimeline(streamHistory, {
-// 					sortDesc: false,
-// 					language: "en-US",
-// 					formatDate: 'd MMM'
-// 				});
-// 			}
+		xhrStreamHistory.onreadystatechange = function () {
+			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
+				var streamHistory = JSON.parse(this.responseText);
+				
+				("#streamHistoryTable").albeTimeline(streamHistory, {
+					sortDesc: false,
+					language: "en-US",
+					formatDate: 'd MMM'
+				});
+			}
 
-// 		};
-// 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
-// 		xhrStreamHistory.send();
-		("#streamHistoryTable").html(document.getElementById('list0').innerHTML = "<p><iframe src=\"https://albejr.github.io/jquery-albe-timeline/templates/simple/index.html\" frameborder=\"0\" height=\"830\" width=\"99%\"></iframe></p>");
+		};
+		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
+		xhrStreamHistory.send();
+// 		("#streamHistoryTable").html(document.getElementById('list0').innerHTML = "<p><iframe src=\"https://albejr.github.io/jquery-albe-timeline/templates/simple/index.html\" frameborder=\"0\" height=\"830\" width=\"99%\"></iframe></p>");
 		
 		
 	}
