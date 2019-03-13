@@ -219,8 +219,9 @@
 // 		};
 // 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 // 		xhrStreamHistory.send();
-		
-		$("#myiframeid").load("history.html");
+		var context = $('#myiframeid').contentWindow.document;
+    var $body = $('body', context);
+		$body.load("history.html");
 		
 	}
 
