@@ -200,23 +200,27 @@
 // 			"headers=false&amp;range=A1:C" + row + "\" " +
 // 			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
 // 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
-		var xhrStreamHistory = new XMLHttpRequest();
+		
+		
+// 		var xhrStreamHistory = new XMLHttpRequest();
 
-		xhrStreamHistory.onreadystatechange = function () {
-			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
-				var streamHistory = JSON.parse(this.responseText);
-				var context = $('#myiframeid').contentWindow.document;
-    var $body = $('body', context);
-				$body.albeTimeline(streamHistory, {
-					sortDesc: false,
-					language: "en-US",
-					formatDate: 'd MMM'
-				});
-			}
+// 		xhrStreamHistory.onreadystatechange = function () {
+// 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
+// 				var streamHistory = JSON.parse(this.responseText);
+// 				var context = $('#myiframeid').contentWindow.document;
+//     var $body = $('body', context);
+// 				$body.albeTimeline(streamHistory, {
+// 					sortDesc: false,
+// 					language: "en-US",
+// 					formatDate: 'd MMM'
+// 				});
+// 			}
 
-		};
-		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
-		xhrStreamHistory.send();
+// 		};
+// 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
+// 		xhrStreamHistory.send();
+		
+		$("#list0").load("history.html");
 		
 	}
 
