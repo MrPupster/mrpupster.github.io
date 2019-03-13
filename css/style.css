@@ -15,11 +15,11 @@
     float: left!important;
 }
 
-#list0  p {
+/* #list0  p {
     font: arial;
     font-size: 14px;
     background-color: #f0f0f0 ;
-}
+} */
 
 @@font-face {
  font-family: 'Open Sans';
