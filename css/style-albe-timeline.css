@@ -6,7 +6,7 @@
 /* #list0 body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1em; color: #c7c7c7; background-color: #141419; margin: 0; } */
 
 #list0 h5 { margin-top: 5px; margin-bottom: 5px; line-height: 1; }
-#list0 h1 {float: left; margin-top: -27px; margin-left: -65px; text-align: center; width: 5%;} /* margin-top: -31px; */
+#list0 h1 {float: left; margin-top: -55px; margin-left: -75px; text-align: center; width: 5%; font-size: 15px; color: #ddd;} /* margin-top: -31px; */
 #list0 p {font-size: 15px; color: #c7c7c7; margin-top: 10px; margin-bottom: 5px; line-height: 1.2; text-decoration: none;}
 /* #list0 a:hover {text-decoration: underline;} */
 #list0 ul#timeline-menu { height: 50px; text-align: center; }
@@ -16,7 +16,7 @@
 
 #list0 section#timeline { width: 750px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
    #list0  section#timeline article { padding: 10px 0 0 10px; margin: 0 0 0 55px; position: relative; border-left: 2px solid #6441a5; }
-   #list0  section#timeline > article > div.panel { padding: 5px; margin: 0; border-style: none;}
+   #list0  section#timeline > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;}
      #list0    section#timeline > article > div.panel:before { content: ' '; width: 10px; height: 10px; background: #c7c7c7; display: block; position: absolute; margin: 0 auto; 
                                                         left: 0; right: 0; top: 19px; margin-left: -8.5px; border: 2px solid #6441a5; border-radius: 50%; z-index: 1;}
        #list0  section#timeline > article:hover > div.panel:before { background: #6441a5; border: 2px solid #c7c7c7;}
