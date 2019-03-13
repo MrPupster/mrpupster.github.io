@@ -45,7 +45,7 @@
 						<h4 class="modal-title">История прошлых стримов</h4>
 					</div>
 					<div class="modal-body">
-						<div id="list0" style="overflow: auto; height:500px"></div>
+						<div id="list0" style="overflow: auto; height:720px; width: 685px;"></div>
 <!-- 						<iframe height="530" id="myiframeid"></iframe> -->
 					</div>
 				</div>
@@ -199,8 +199,7 @@
 // 			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
 // 			"headers=false&amp;range=A1:C" + row + "\" " +
 // 			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
-// 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
-		
+// 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";		
 		
 		var xhrStreamHistory = new XMLHttpRequest();
 
@@ -218,9 +217,6 @@
 		};
 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
-// 		("#streamHistoryTable").html(document.getElementById('list0').innerHTML = "<p><iframe src=\"https://albejr.github.io/jquery-albe-timeline/templates/simple/index.html\" frameborder=\"0\" height=\"830\" width=\"99%\"></iframe></p>");
-		
-		
 	}
 
 	function secsToDurationStr(secondsStr) {
