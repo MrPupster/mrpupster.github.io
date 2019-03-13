@@ -208,7 +208,7 @@
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
 				
-				("#streamHistoryTable").albeTimeline(streamHistory, {
+				$("#streamHistoryTable").albeTimeline(streamHistory, {
 					sortDesc: false,
 					language: "en-US",
 					formatDate: 'd MMM'
