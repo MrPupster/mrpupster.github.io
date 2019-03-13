@@ -205,7 +205,7 @@
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);
-				$('#list0').html(albeTimeline(streamHistory, {
+				$('#list0').html($.albeTimeline(streamHistory, {
 					sortDesc: false,
 					language: "en-US",
 					formatDate: 'd MMM'
