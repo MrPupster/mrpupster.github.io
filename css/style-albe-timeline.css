@@ -21,7 +21,7 @@
                                                         left: 0; right: 0; top: 18px; margin-left: -7.5px; border: 2px solid #6441a5; border-radius: 50%; z-index: 1;}
        #list0  section#timeline > article:hover > div.panel:before { background: #6441a5; border: 2px solid #ddd;}
         #list0 section#timeline > article > div.panel:last-child:after { display: none; }
-         #list0  section#timeline > article > div.panel-body { padding: 0px;}
+         #list0 .panel-body { padding: 0px;}
        #list0  section#timeline > article > div.panel div.badge { display: inline-block; padding: 3px 7px; font-size: 14px; line-height: 1; color: #FFF; text-align: center; white-space: nowrap; vertical-align: middle; background-color: #6441a5; border-radius: 0; }
             #list0 section#timeline > article > div.panel div.badge:last-child {position: relative; z-index: 2; margin-left: -26px; margin-bottom: -7px; border-radius: 60%; height: 20px; width: 20px;}
 
