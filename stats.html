@@ -351,10 +351,11 @@
 <script>
 	handleInputFocus();
 	var isFirstShowCall = false;
-	   isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
-    if(isFirstShowCall) {
+	   
             e.preventDefault();$('#historyModal').on('show.bs.modal', function(e) {
-  setTimeout( function() {$('#historyModal').modal('show');}, 2000);}
+		    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
+    if(isFirstShowCall) { e.preventDefault();
+  setTimeout( function() {$('#historyModal').modal('show');}, 2000)}
 });
 </script>
 
