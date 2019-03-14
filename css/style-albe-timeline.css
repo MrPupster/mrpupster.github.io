@@ -38,6 +38,6 @@
   
 .simplescrollup__button--show { transform: translateX(0); }
   
-simplescrollup__button--hide { transform: translateX(100px); }
+.simplescrollup__button--hide { transform: translateX(100px); }
 
 
