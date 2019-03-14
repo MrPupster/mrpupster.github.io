@@ -350,9 +350,11 @@
 </script>
 <script>
 	handleInputFocus();
-	
-	   $('#historyModal').on('show.bs.modal', function() {
-  setTimeout( function() {$('#historyModal').modal('show');}, 2000);
+	var isFirstShowCall = false;
+	   isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
+    if(isFirstShowCall) {
+            e.preventDefault();$('#historyModal').on('show.bs.modal', function(e) {
+  setTimeout( function() {$('#historyModal').modal('show');}, 2000);}
 });
 </script>
 
