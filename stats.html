@@ -353,14 +353,14 @@
 	var isFirstShowCall = false;
 	   
         $('#historyModal').on('show.bs.modal', function (e) {
-    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
-    if (isFirstShowCall) {
-        e.preventDefault(); // Prevent immediate opening
-        window.setTimeout(function () {
-            $('#historyModal').modal('show');
-        }, 3000)
-    }
-});
+	    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
+	    if (isFirstShowCall) {
+		e.preventDefault(); // Prevent immediate opening
+		window.setTimeout(function () {
+		    $('#historyModal').modal('show');
+		}, 500)
+	    }
+	});
 </script>
 
 
