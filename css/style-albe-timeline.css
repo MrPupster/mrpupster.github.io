@@ -29,7 +29,7 @@
 #list0 span:empty {
             height: 500px;
             width: 200px;
-         background: transparent;
+         background: #6441a5;
          padding: 3px;
          margin-left: 7px;
          display: inline-block;
