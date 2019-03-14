@@ -44,9 +44,9 @@
 						<button type="button" class="close" data-dismiss="modal"></button>
 						<h4 class="modal-title inline pull-left">История прошлых стримов</h4>
 						<span id="faqDialogHistory" class="inline pull-left"></span>
-			<td><strong class="inline pull-right dashed" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogHistory()">
-				<font size="3">F.A.Q.</font>
-			    </strong><i class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
+						<td><strong class="inline pull-right dashed" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogHistory()">
+							<font size="3">F.A.Q.</font>
+						    </strong><i class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
 					</div>
 					<div class="modal-body">
 						<div id="list0" style="overflow: auto; height:720px; width: 685px;"></div>
@@ -208,9 +208,8 @@
 
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
-				var streamHistory = JSON.parse(this.responseText);
-				
-				$("#list0").albeTimeline(streamHistory, {effect: 'fadeInUp', formatDate: 'd MMM' });
+				var streamHistory = JSON.parse(this.responseText);				
+				$("#list0").albeTimeline(streamHistory, {effect: 'fadeIn', formatDate: 'd MMM' });
 			}
 
 		};
@@ -330,8 +329,7 @@
 			effect: "blind",
 			duration: 400
 		    },
-		    title: 'F.A.Q.'
-			
+		    title: 'F.A.Q.'			
 		});
 		$(".ui-dialog").css({ zIndex: 1500 });
     }
