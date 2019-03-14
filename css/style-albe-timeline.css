@@ -29,11 +29,11 @@
 
 #list0  .simplescrollup__button {
     position: fixed;
-    bottom: 3rem;
+    bottom: 1rem;
     right: 3rem;
     transition: 1s all;
     z-index: 10000;
-    color: #fff;
+/*     color: #fff; */
   }
   
  #list0 .simplescrollup__button--show { transform: translateX(0); }
