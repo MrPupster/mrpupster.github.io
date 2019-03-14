@@ -1,14 +1,5 @@
 <!-- НУ И ЧЕГО ТЕБЕ ЗДЕСЬ НАДО? -->
-<style>
-       #modalBody span:empty {
-            height: 720px;
-            width: 70px;
-         background: red;
-         padding: 3px;
-         margin-left: 7px;
-         display: inline-block;
-        }
-       </style>
+
 <div id="statsAccordion">	
 
 	<h3>Зрители</h3>
@@ -208,14 +199,14 @@
 		}
 	}
 
-// 	function loadStreamHistory() {
+	function loadStreamHistory() {
 // 		var row = $('#streamHistoryTable').data('row'),
 // 			streamHistory = "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRxendKNyKxT1g33xOp9K-Nww3bz6qOonruI" +
 // 			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
 // 			"headers=false&amp;range=A1:C" + row + "\" " +
 // 			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
 // 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";		
-		
+// 		if ($('#historyModal').data('isFirstShowCall') == true) { alert(123);} alert($('#historyModal').data('isFirstShowCall'));
 		var xhrStreamHistory = new XMLHttpRequest();
 
 		xhrStreamHistory.onreadystatechange = function () {
@@ -228,7 +219,7 @@
 		};
 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
-// 	}
+	}
 
 	function secsToDurationStr(secondsStr) {
 		var seconds = parseInt(secondsStr),
@@ -346,7 +337,7 @@
 		});
 		$(".ui-dialog").css({ zIndex: 1500 });
     }
-	
+alert($('#historyModal').data('isFirstShowCall'));	
 </script>
 <!-- Run the Acordion -->
 <script>
