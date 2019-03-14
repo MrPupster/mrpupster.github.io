@@ -363,17 +363,17 @@
 </script>
 <script>
 	handleInputFocus();
-	var isFirstShowCall = false;
+// 	var isFirstShowCall = false;
 	   
-        $('#historyModal').on('show.bs.modal', function (e) {
-	    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
-	    if (isFirstShowCall) {
-		e.preventDefault(); // Prevent immediate opening
-		window.setTimeout(function () {
-		    $('#historyModal').modal('show');
-		}, 800)
-	    }
-	});
+//         $('#historyModal').on('show.bs.modal', function (e) {
+// 	    isFirstShowCall = !isFirstShowCall; 
+// 	    if (isFirstShowCall) {
+// 		e.preventDefault(); 
+// 		window.setTimeout(function () {
+// 		    $('#historyModal').modal('show');
+// 		}, 1000)
+// 	    }
+// 	});
 </script>
 
 
