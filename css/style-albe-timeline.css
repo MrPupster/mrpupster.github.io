@@ -27,7 +27,7 @@
       #list0  section#timeline a.badge {text-decoration: none; padding: 3px 7px; font-size: 14px; line-height: 1; color: #FFF; text-align: center; white-space: nowrap; vertical-align: middle; background-color: #6441a5; border-radius: 0;}
   #list0  section#timeline div[class*="group"] { width: 85px; min-width: 85px; max-width: 85px; padding: 0px; margin-top: 20px; font-weight: bold; text-align: center; display: block; border-bottom: 2px solid #6441a5; font-size: 1.6em; line-height: 1.5; right: 125px; }
 
-#timeline .simplescrollup__button {
+section#timeline .simplescrollup__button {
     position: fixed;
     bottom: 3rem;
     right: 3rem;
@@ -36,8 +36,8 @@
     color: #fff;
   }
   
-#timeline .simplescrollup__button--show { transform: translateX(0); }
+section#timeline .simplescrollup__button--show { transform: translateX(0); }
   
-#timeline .simplescrollup__button--hide { transform: translateX(100px); }
+section#timeline .simplescrollup__button--hide { transform: translateX(100px); }
 
 
