@@ -135,6 +135,28 @@
 	};
 	xhrViewerStats.open("GET", "./json/viewersStats.json", true);
 	xhrViewerStats.send();
+	
+// 	function loadStreamHistory() {
+// 		var row = $('#streamHistoryTable').data('row'),
+// 			streamHistory = "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRxendKNyKxT1g33xOp9K-Nww3bz6qOonruI" +
+// 			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
+// 			"headers=false&amp;range=A1:C" + row + "\" " +
+// 			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
+// 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";		
+
+		var xhrStreamHistory = new XMLHttpRequest();
+
+		xhrStreamHistory.onreadystatechange = function () {
+			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
+				var streamHistory = JSON.parse(this.responseText);				
+				$("#list0").albeTimeline(streamHistory, {effect: 'none', formatDate: 'd MMM' });
+				
+			}
+
+		};
+		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
+		xhrStreamHistory.send();
+// 	}
 
 	function searchViewer() {
 		var name = $('#viewerName').val().trim().toLowerCase();
@@ -197,28 +219,6 @@
 				title: user + ' не найден'
 			});
 		}
-	}
-
-	function loadStreamHistory() {
-// 		var row = $('#streamHistoryTable').data('row'),
-// 			streamHistory = "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRxendKNyKxT1g33xOp9K-Nww3bz6qOonruI" +
-// 			"dpl9zJMYqY1VC4aaMHNHWeuksUP8OLyM03fo_XK3ZaF/pubhtml?gid=1755003823&amp;single=true&amp;chrome=false&amp;" +
-// 			"headers=false&amp;range=A1:C" + row + "\" " +
-// 			"width=678 height=710 frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" border=\"none\" " +
-// 			"style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";		
-// 		if ($('#historyModal').data('isFirstShowCall') == true) { alert(123);} alert($('#historyModal').data('isFirstShowCall'));
-		var xhrStreamHistory = new XMLHttpRequest();
-
-		xhrStreamHistory.onreadystatechange = function () {
-			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
-				var streamHistory = JSON.parse(this.responseText);				
-				$("#list0").albeTimeline(streamHistory, {effect: 'none', formatDate: 'd MMM' });
-				
-			}
-
-		};
-		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
-		xhrStreamHistory.send();
 	}
 
 	function secsToDurationStr(secondsStr) {
@@ -336,8 +336,7 @@
 		    title: 'F.A.Q.'			
 		});
 		$(".ui-dialog").css({ zIndex: 1500 });
-    }
-alert($('#historyModal').data('isFirstShowCall'));	
+    }	
 </script>
 <!-- Run the Acordion -->
 <script>
