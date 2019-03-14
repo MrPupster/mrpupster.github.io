@@ -15,7 +15,9 @@
     font-size: 2em;
 }
 
-
+.ui-dialog-content {
+    float: left!important;
+}
 
 /* #list0  p {
     font: arial;
