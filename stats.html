@@ -351,8 +351,9 @@
 <script>
 	handleInputFocus();
 	setTimeout(function() {
-	    $('#historyModal').modal('show');
-	}, 2000);
+	    $('#historyModal').on('show.bs.modal', function() {
+  alert(123);
+});
 </script>
 
 
