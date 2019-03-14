@@ -221,10 +221,7 @@
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);				
-				$("#list0").albeTimeline(streamHistory, {effect: 'none', formatDate: 'd MMM' });
-				$("#timeline").html('<a href="#up" duration="1000" height-hide="100" easing="easeInOutQuad"' +
-						    'class="simplescrollup__button simplescrollup__button--hide">' +
-							'<i class="fa fa-angle-up fa-3x"></i></a>');
+				$("#list0").albeTimeline(streamHistory, {effect: 'none', formatDate: 'd MMM' });				
 			}
 
 		};
