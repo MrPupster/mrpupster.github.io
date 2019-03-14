@@ -222,7 +222,7 @@
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);				
 				$("#list0").albeTimeline(streamHistory, {effect: 'none', formatDate: 'd MMM' });
-				$("#timeline").html('<div class="ue-scroll btn-white arrow-black circle"></div>');
+				
 			}
 
 		};
