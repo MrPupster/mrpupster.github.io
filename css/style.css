@@ -11,6 +11,10 @@
     --hyperlinks: #6441a5;
 }
 
+.fa-4x {
+    font-size: 4em;
+}
+
 .simplescrollup__button {
     position: fixed;
     bottom: 0rem;
