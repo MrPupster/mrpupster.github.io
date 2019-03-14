@@ -352,10 +352,14 @@
 	handleInputFocus();
 	var isFirstShowCall = false;
 	   
-            e.preventDefault();$('#historyModal').on('show.bs.modal', function(e) {
-		    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
-    if(isFirstShowCall) { e.preventDefault();
-  setTimeout( function() {$('#historyModal').modal('show');}, 2000)}
+        $('#historyModal').on('show.bs.modal', function (e) {
+    isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
+    if (isFirstShowCall) {
+        e.preventDefault(); // Prevent immediate opening
+        window.setTimeout(function () {
+            $('#historyModal').modal('show');
+        }, 3000)
+    }
 });
 </script>
 
