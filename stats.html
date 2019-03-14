@@ -301,6 +301,7 @@
 	}
 	
 	function openFaqDialogStats() {
+		$("#faqDialogStats").dialog("moveToTop");
 		$("#faqDialogStats").html(
 		    '<td>Список пользователей с наибольшим кол-ом сообщений и времени, проведенном на стримах. Кликните на заголовок ' + 
 			'столбца, чтобы отсортировать данные по соответсвующему критерию. Чтобы посмотреть дату подписки (follow), ' +
@@ -315,7 +316,7 @@
 		    },
 		    title: 'F.A.Q.'
 		});
-		$("#faqDialogStats").dialog("moveToTop");
+		
     }
 	
 </script>
