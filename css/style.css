@@ -13,11 +13,12 @@
 
 .simplescrollup__button {
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 0rem;
+/*     right: 3rem; */
+    left: -9rem;
     transition: 1s all;
     z-index: 10000;
-    color: #fff;
+/*     color: #fff; */
   }
   
 .simplescrollup__button--show { transform: translateX(0); }
