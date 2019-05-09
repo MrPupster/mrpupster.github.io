@@ -71,6 +71,9 @@
 
 </div>
 <script type="text/javascript">
+     $('#subdayStatus').html("<font color=\"red\">закрыто</font>");
+            $('#subdayVotes').html(0);
+            $('#subdayGamesTable').html("<i>Список пуст</i>");
     function subdayMain() {
         var status = $('#subdayStatus').data('status');
         //         var xhrSybday = new XMLHttpRequest();
@@ -98,12 +101,12 @@
                 "style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
             //$('#subdayVotes').html(votes);
             $('#subdayGamesTable').html(subday);
-
-        } else {
-             $('#subdayStatus').html("<font color=\"red\">закрыто.</font>");
-            $('#subdayVotes').html(0);
-            $('#subdayGamesTable').html("<i>Список пуст</i>");
         }
+//         } else {
+//              $('#subdayStatus').html("<font color=\"red\">закрыто.</font>");
+//             $('#subdayVotes').html(0);
+//             $('#subdayGamesTable').html("<i>Список пуст</i>");
+//         }
         //             }
 
         //         };
