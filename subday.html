@@ -81,12 +81,9 @@
         //                var subdayStatus = JSON.parse(this.responseText);
         //                 if ("закрыто" === subdayStatus.status) {
 
-        if ("закрыто" === status) {
-            $('#subdayStatus').html("<font color=\"red\">закрыто</font>");
-            $('#subdayVotes').html(0);
-            $('#subdayGamesTable').html("<i>Список пуст</i>");
-
-        } else {
+        if ("закрыто" !== status) {
+           
+            
             status = ("открыто" === status) ? "<font color=\"#5AFF00\">открыто</font>" :
                 "<font color=\"yellow\">окончено</font>";
             $('#subdayStatus').html(status);
@@ -101,6 +98,11 @@
                 "style=\"overflow:hide;border: 0px solid white;\">Загрузка...</iframe> ";
             //$('#subdayVotes').html(votes);
             $('#subdayGamesTable').html(subday);
+
+        } else {
+             $('#subdayStatus').html("<font color=\"red\">закрыто.</font>");
+            $('#subdayVotes').html(0);
+            $('#subdayGamesTable').html("<i>Список пуст</i>");
         }
         //             }
 
