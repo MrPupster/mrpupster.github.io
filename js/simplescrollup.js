@@ -90,13 +90,13 @@ document.addEventListener("DOMContentLoaded", function(){
     // Events
 
     // Click button
-    buttonUp.addEventListener('click', function() {
-        // Get attributes
-        var duration = parseInt(buttonUp.getAttribute('duration')) || 1000;
-        var easing = buttonUp.getAttribute('easing') || 'easeInOutQuad';
-        // Run
-        scrollUp(duration, easing);
-    });
+//     buttonUp.addEventListener('click', function() {
+//         // Get attributes
+//         var duration = parseInt(buttonUp.getAttribute('duration')) || 1000;
+//         var easing = buttonUp.getAttribute('easing') || 'easeInOutQuad';
+//         // Run
+//         scrollUp(duration, easing);
+//     });
 
     // Auto show and hide button
     window.addEventListener('scroll', isVisibled);
