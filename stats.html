@@ -77,7 +77,9 @@
 					"<span class=\"greenPill\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Стрим онлайн\"><i class=\"fa fa-twitch fa-lg\" style=\"margin-right: 5px\"/> " +
 					hrs + min + "</span>");
 			} else {
-				$('#streamOnline').html('');
+// 				$('#streamOnline').html('');
+				$('#streamOnline').html(
+					"<span class=\"greenPill\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Стрим онлайн\"><i class=\"fa fa-twitch fa-lg\" style=\"margin-right: 5px\"/>123 </span>");
 			}
 			$('#streamHistoryTable').html('<br><br><ul>' +
 				'<li>' + streamStatus.offline + '</li><br>' +
