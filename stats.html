@@ -282,8 +282,9 @@
 	// 				var local = date.toLocaleDateString('ru', options);
 	// 				var time = Date.parse(date);
 	// 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
+					 var followDate1 = moment(followDate, "MMM DD YYYY");
 					moment.locale('ru');
-					followAge = moment(followDate, "MMM DD YYYY").format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
+					followAge = followDate1.format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
 				}				
 			} else return null;
 		};
