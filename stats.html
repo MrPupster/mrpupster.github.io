@@ -276,13 +276,14 @@
 					followAge = 'Владелец канала. Невозможно быть подписанным на самого себя.';
 				} else {
 					var followDateRaw = this.responseText,
-					    followDate = followDateRaw.slice(0, followDateRaw.indexOf('-') - 1).replace('.', '').replace(/ /g, '-');
+// 					    followDate = followDateRaw.slice(0, followDateRaw.indexOf('-') - 1).replace('.', '').replace(/ /g, '-');
+					    followDate = "Jun-3-2015";
 	// 				var date = new Date("Jan 25 2015");
 	// 				var local = date.toLocaleDateString('ru', options);
 	// 				var time = Date.parse(date);
 	// 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
 					moment.locale('ru');
-					followAge = moment(followDate, 'MMM-D-YYYY').format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
+					followAge = moment(followDate, "MMM-D-YYYY").format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
 				}				
 			} else return null;
 		};
