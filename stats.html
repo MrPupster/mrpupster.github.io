@@ -275,8 +275,8 @@
 				} else if (this.responseText.startsWith('A user cannot follow themself')) {
 					followAge = 'Владелец канала. Невозможно быть подписанным на самого себя.';
 				} else {
-					var followDateRaw = this.responseText.replace('.', ''),
-					    followDate = followDateRaw.slice(0, followDateRaw.indexOf('-'));
+					var followDateRaw = this.responseText.slice(0, followDateRaw.indexOf('-') - 1),
+					    followDate = followDateRaw.replace('.', '').replace(/ /g, '-');
 	// 				var date = new Date("Jan 25 2015");
 	// 				var local = date.toLocaleDateString('ru', options);
 	// 				var time = Date.parse(date);
