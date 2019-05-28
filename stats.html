@@ -277,14 +277,14 @@
 				} else {
 					var followDateRaw = this.responseText,
 // 					    followDate = followDateRaw.slice(0, followDateRaw.indexOf('-') - 1).replace('.', '').replace(/ /g, '-');
-					    followDate = "Дек 16 2015";
+					    followDate = "02 16 2015";
 	// 				var date = new Date("Jan 25 2015");
 	// 				var local = date.toLocaleDateString('ru', options);
 	// 				var time = Date.parse(date);
 	// 				var days = Math.floor((Math.abs((time - +new Date()) / 1000)) / 86400);
 					 var followDate1 = moment(followDate, "MMM DD YYYY");
 // 					moment.locale('ru');
-					followAge = moment(followDate, "MMM DD YYYY").format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
+					followAge = moment(followDate, "MM DD YYYY").format('Do MMMM, YYYY') + ' (' + daysAmount(followDate) + ')';
 				}				
 			} else return null;
 		};
