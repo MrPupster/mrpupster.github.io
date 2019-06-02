@@ -94,7 +94,7 @@
 			$('#streamHistoryTable').data('row', streamStatus.row);
 			$('#subdayStatus').data('status', streamStatus.subday);
 			subdayMain();
-			console.log(moment('25.05.19'));
+			console.log(moment('25.05.19', 'D.MM.YY'));
 		}
 	};
 	xhrStreamStatus.open("GET", "./json/streamStatus.json", true);
