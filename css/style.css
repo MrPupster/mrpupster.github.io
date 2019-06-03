@@ -19,6 +19,14 @@
     float: left!important;
 }
 
+.dashed {
+   border-bottom: 1px dashed;
+}
+
+.dashed:hover {
+   border-bottom: none;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar-button { 
 /* background-image:url('');  */
