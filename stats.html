@@ -50,7 +50,7 @@
 					</div>
 					<div id="modalBody" class="modal-body">	
 						
-						<div id="list0" style="overflow: auto; height:720px; width: 685px;"></div>
+						<div id="list0" class="scroll-test" style="overflow: auto; height:720px; width: 685px;"></div>
 						<a class="scrollto" href="#timeline-menu" style="position: relative;bottom: 45px;right: 20px;">
 						  	<i class="fa fa-angle-up fa-3x"></i>
 						</a>
@@ -383,7 +383,7 @@ $(document).ready(function(){
         e.preventDefault();
         var t = 1000;
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $('list0,timeline').stop().animate({ scrollTop: $(d).offset().top }, t);
+        $('.scroll-test').stop().animate({ scrollTop: $(d).offset().top }, t);
     });
 });
 </script>
