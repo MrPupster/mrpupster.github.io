@@ -173,13 +173,13 @@
     </script>  
     
     <script>
-jQuery(document).ready(function() {
-  jQuery("a.scrollto").click(function () {
-    elementClick = jQuery(this).attr("href")
-    destination = jQuery(elementClick).offset().top;
-    jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
-    return false;
-  });
+$(document).ready(function(){
+    $('a.scrollto').on('click', function(e){
+        e.preventDefault();
+        var t = 1000;
+        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
+    });
 });
 </script>
     
