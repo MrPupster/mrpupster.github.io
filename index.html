@@ -178,7 +178,7 @@ $(document).ready(function(){
         e.preventDefault();
         var t = 1000;
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $('.scroll-test').stop().animate({ scrollTop: $(d).offset().top }, t);
+        $('.scroll-test').stop().animate({ scrollTop: $(d).offset().top - 100 }, t);
     });
 });
 </script>
