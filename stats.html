@@ -51,7 +51,7 @@
 					<div id="modalBody" class="modal-body">	
 						
 						<div id="list0" style="overflow: auto; height:720px; width: 685px;"></div>
-						<a class="pull-right" href="#timeline-menu" style="position: relative;bottom: 45px;right: 20px;">
+						<a class="scrollto" href="#timeline-menu" style="position: relative;bottom: 45px;right: 20px;">
 						  	<i class="fa fa-angle-up fa-3x"></i>
 						</a>
 						
@@ -375,6 +375,17 @@
 // 		}, 1000)
 // 	    }
 // 	});  
+</script>
+
+<script>
+jQuery(document).ready(function() {
+  jQuery("a.scrollto").click(function () {
+    elementClick = jQuery(this).attr("href")
+    destination = jQuery(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+    return false;
+  });
+});
 </script>
 
 
