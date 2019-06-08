@@ -27,6 +27,10 @@
    border-bottom: none;
 }
 
+.ui-dialog { 
+    z-index: 1500;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar-button { 
 /* background-image:url('');  */
