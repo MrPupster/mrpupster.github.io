@@ -384,8 +384,8 @@ var block_show = null;
 function scrollTracking(){
     var wt = $('.scroll-test').scrollTop();
     var wh = $('.scroll-test').height();
-    var et = $('.y2017').offset().top;
-    var eh = $('.y2017').outerHeight();
+    var et = $('#y2017').offset().top;
+    var eh = $('#y2017').outerHeight();
 
     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
         if (block_show == null || block_show == false) {
@@ -400,7 +400,7 @@ function scrollTracking(){
     }
 }
 
-$(window).scroll(function(){
+$('.scroll-test').scroll(function(){
     scrollTracking();
 });
     
