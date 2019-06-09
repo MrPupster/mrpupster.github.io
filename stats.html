@@ -379,13 +379,34 @@
 </script>
 
 <script>
-$(document).ready(function(){
-            $('a.scrollto').on('click', function(e){
-                e.preventDefault();
-//                 $('.scroll-test').stop().animate({ scrollTop: $(this.hash) }, 500);
-                $('.scroll-test').scrollTo($(this.hash), 500);
-            });
-        });
+var block_show = null;
+
+function scrollTracking(){
+    var wt = $('.scroll-test').scrollTop();
+    var wh = $('.scroll-test').height();
+    var et = $('.y2017').offset().top;
+    var eh = $('.y2017).outerHeight();
+
+    if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+        if (block_show == null || block_show == false) {
+            console.log('Блок active в области видимости');
+        }
+        block_show = true;
+    } else {
+        if (block_show == null || block_show == true) {
+            console.log('Блок active скрыт');
+        }
+        block_show = false;
+    }
+}
+
+$(window).scroll(function(){
+    scrollTracking();
+});
+    
+$(document).ready(function(){ 
+    scrollTracking();
+});
 </script>
 
 
