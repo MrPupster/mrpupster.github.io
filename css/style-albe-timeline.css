@@ -20,6 +20,8 @@
     #list0  section#timeline > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;} 
     #list0    section#timeline div[class*="yyy"] > article > div.panel:before { content: ' '; width: 14px; height: 14px; background: #ddd; display: block; position: absolute; margin: 0 auto; 
                                                         left: 0; right: 0; top: 18px; margin-left: -8.5px; border: 2px solid #6441a5; border-radius: 50%; z-index: 1;}
+    #list0    section#timeline > article > div.panel:before { content: ' '; width: 14px; height: 14px; background: #ddd; display: block; position: absolute; margin: 0 auto; 
+                                                        left: 0; right: 0; top: 18px; margin-left: -8.5px; border: 2px solid #6441a5; border-radius: 50%; z-index: 1;}
        #list0  section#timeline div[class*="yyy"] > article:hover > div.panel:before { background: #6441a5; border: 2px solid #ddd;}
         #list0 section#timeline > article > div.panel:last-child:after { display: none; }
          #list0 .panel-body { padding: 0px;}
