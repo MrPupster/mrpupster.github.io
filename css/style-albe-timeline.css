@@ -17,12 +17,14 @@
 #list0 section#timeline { width: 665px; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto; }
    #list0  section#timeline div[class*="yyy"] article { padding: 10px 0 0 10px; margin: 0 0 0 55px; position: relative; border-left: 2px solid #6441a5; }
    #list0  section#timeline div[class*="yyy"] > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;}
-     #list0    section#timeline div[class*="yyy"] > article > div.panel:before { content: ' '; width: 14px; height: 14px; background: #ddd; display: block; position: absolute; margin: 0 auto; 
+    #list0  section#timeline > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;} 
+    #list0    section#timeline div[class*="yyy"] > article > div.panel:before { content: ' '; width: 14px; height: 14px; background: #ddd; display: block; position: absolute; margin: 0 auto; 
                                                         left: 0; right: 0; top: 18px; margin-left: -8.5px; border: 2px solid #6441a5; border-radius: 50%; z-index: 1;}
        #list0  section#timeline div[class*="yyy"] > article:hover > div.panel:before { background: #6441a5; border: 2px solid #ddd;}
         #list0 section#timeline > article > div.panel:last-child:after { display: none; }
          #list0 .panel-body { padding: 0px;}
        #list0  section#timeline div[class*="yyy"] > article > div.panel div.badge { display: inline-block; padding: 3px 7px; font-size: 14px; line-height: 1; color: #FFF; text-align: center; white-space: nowrap; vertical-align: middle; background-color: #6441a5; border-radius: 0; }
+        #list0  section#timeline > article > div.panel div.badge { display: inline-block; padding: 3px 7px; font-size: 14px; line-height: 1; color: #FFF; text-align: center; white-space: nowrap; vertical-align: middle; background-color: #6441a5; border-radius: 0; }
             #list0 section#timeline > article > div.panel div.badge:last-child {position: relative; z-index: 2; margin-left: -26px; margin-bottom: -7px; border-radius: 60%; height: 20px; width: 20px;}
       #list0  section#timeline div[class*="yyy"] a.badge {text-decoration: none; padding: 3px 7px; font-size: 14px; line-height: 1; color: #FFF; text-align: center; white-space: nowrap; vertical-align: middle; background-color: #6441a5; border-radius: 0;}
   #list0  section#timeline div[class*="yyy"] div[class*="group"] { width: 85px; min-width: 85px; max-width: 85px; padding: 0px; margin-top: 20px; font-weight: bold; text-align: center; display: block; border-bottom: 2px solid #6441a5; font-size: 1.6em; line-height: 1.5; right: 125px; }
