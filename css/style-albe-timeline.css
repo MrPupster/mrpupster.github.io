@@ -16,6 +16,7 @@
 
 #list0 section#timeline { width: 665px; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto; }
    #list0  section#timeline div[class*="yyy"] article { padding: 10px 0 0 10px; margin: 0 0 0 55px; position: relative; border-left: 2px solid #6441a5; }
+    #list0  section#timeline article { padding: 10px 0 0 10px; margin: 0 0 0 55px; position: relative; border-left: 2px solid #6441a5; }
    #list0  section#timeline div[class*="yyy"] > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;}
     #list0  section#timeline > article > div.panel { padding: 5px; margin: 0; border-style: none; background-color: transparent;} 
     #list0    section#timeline div[class*="yyy"] > article > div.panel:before { content: ' '; width: 14px; height: 14px; background: #ddd; display: block; position: absolute; margin: 0 auto; 
