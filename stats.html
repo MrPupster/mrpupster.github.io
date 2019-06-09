@@ -384,8 +384,8 @@ var block_show = null;
 function scrollTracking(){
     var wt = $('.scroll-test').scrollTop();
     var wh = $('.scroll-test').height();
-    var et = $('#list0 section#timeline article').offset().top;
-    var eh = $('#list0 section#timeline article').outerHeight();
+    var et = $('.modal-dialog').offset().top;
+    var eh = $('.modal-dialog').outerHeight();
 
     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
         if (block_show == null || block_show == false) {
