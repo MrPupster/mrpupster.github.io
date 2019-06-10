@@ -384,17 +384,17 @@ var block_show = null;
 function scrollTracking(){
     var wt = $('.scroll-test').scrollTop();
     var wh = $('.scroll-test').height();
-    var et = $('.yyy2019').offset().top;
-    var eh = $('.yyy2019').outerHeight();
+    var et = $('.yyy2018').offset().top;
+    var eh = $('.yyy2018').outerHeight();
 
     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
         if (block_show == null || block_show == false) {
-            console.log('Блок active в области видимости');
+            console.log('Блок yyy2018 в области видимости');
         }
         block_show = true;
     } else {
         if (block_show == null || block_show == true) {
-            console.log('Блок active скрыт');
+            console.log('Блок yyy2018 скрыт');
         }
         block_show = false;
     }
