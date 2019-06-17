@@ -341,21 +341,32 @@
 	
 	function openFaqDialogHistory() {
 		
-		$("#faqDialogHistory").html(
-		    '<td>В верхнем правом углу расположены ссылки, при нажатии перемещает фокус на соответствующий год. Чтобы ' +
-			'переместиться в самый верх, нужно нажать на стрелку в правом нижнем углу. <br><br> ' + 
-			'Также, нажатие на строку с играми, откроет внешний сайт с подробной статистикой по конкретному стриму.</td>');
+// 		$("#faqDialogHistory").html(
+// 		    '<td>В верхнем правом углу расположены ссылки, при нажатии перемещает фокус на соответствующий год. Чтобы ' +
+// 			'переместиться в самый верх, нужно нажать на стрелку в правом нижнем углу. <br><br> ' + 
+// 			'Также, нажатие на строку с играми, откроет внешний сайт с подробной статистикой по конкретному стриму.</td>');
 // 		$(".ui-dialog").css({ zIndex: 1500 });
-		$("#faqDialogHistory").dialog({
-		    autoOpen: true,
-// 		    height: 250,
-		    width: 470,
-		    show: {
-			effect: "blind",
-			duration: 400
-		    },
-		    title: 'F.A.Q.'			
+		$("#faqDialogHistory").popover({
+// 		    autoOpen: true,
+// // 		    height: 250,
+// 		    width: 470,
+// 		    show: {
+// 			effect: "blind",
+// 			duration: 400
+// 		    },
+// 		    title: 'F.A.Q.'
+			
+			html: true,
+// 			container: "#faqDialogStats",
+			content: '<td>В верхнем правом углу расположены ссылки, при нажатии перемещает фокус на соответствующий год. Чтобы ' +
+				'переместиться в самый верх, нужно нажать на стрелку в правом нижнем углу. <br><br> ' + 
+				'Также, нажатие на строку с играми, откроет внешний сайт с подробной статистикой по конкретному стриму.</td>',
+			placement: 'left'
+// 			title: 'F.A.Q.'
+			
 		});
+		$('#faqDialogStats').popover('toggle')
+		
 		
     }	
 </script>
@@ -373,11 +384,11 @@
 		trigger: 'hover'
 	});
 	
-	$('html').on('click', function(e) {
-	  if (typeof $(e.target).data('original-title') == 'undefined' && !$(e.target).parents().is('.popover.in')) {
-	    $('[data-original-title]').popover('hide');
-	  }
-	});
+// 	$('html').on('click', function(e) {
+// 	  if (typeof $(e.target).data('original-title') == 'undefined' && !$(e.target).parents().is('.popover.in')) {
+// 	    $('[data-original-title]').popover('hide');
+// 	  }
+// 	});
 	
 // 	$('body').on('click', function (e) {
 // 	    $('[data-toggle=popover]').each(function () {
