@@ -14,7 +14,7 @@
 			</div>
 			<label for="viewersList">Топ 100</label>
 <!-- 			 <span id="faqDialogStats" class="inline pull-left"></span> -->
-			<td><strong data-toggle="popover"  class="inline pull-right dashed" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogStats()"> <!--  -->
+			<td><strong data-toggle="popover" data-trigger="focus" class="inline pull-right dashed" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogStats()"> <!--  -->
 				<font size="3">F.A.Q.</font>
 			    </strong><i id="faqDialogStats" class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
         
@@ -317,7 +317,7 @@
 // 		    '<td>Список пользователей с наибольшим кол-ом сообщений и времени, проведенном на стримах. Кликните на заголовок ' + 
 // 			'столбца, чтобы отсортировать данные по соответсвующему критерию. Чтобы посмотреть дату подписки (follow), ' +
 // 			'нажмите на порядковый номер в первом столбце.</td>');
-		$("#faqDialogStats").popover('toggle', {
+		$("#faqDialogStats").popover({
 // 		    autoOpen: true,
 // 		    height: 180,
 // 		    width: 470,
@@ -336,7 +336,7 @@
 // 			title: 'F.A.Q.'
 			
 		});
-// 		$('#faqDialogStats').popover('toggle')
+		$('#faqDialogStats').popover('toggle')
 		
     	}
 	
