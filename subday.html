@@ -125,7 +125,35 @@
 
     function openFaqDialog() {
 	    
-	    $("#faqDialog").html(
+	    
+        
+    }
+
+    $('#subdayHistoryTable').html("<i>Список пуст</i>");
+</script>
+<!-- Run the Acordion -->
+<script>
+    $("#subdayAccordion").accordion({
+        clearStyle: true,
+        animate: "swing",
+        heightStyle: "content",
+        icons: null
+    });
+</script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+	
+	
+// 	$( "#faqDialog" ).on( "dialogopen", function(event, ui) {
+// 		$('.ui-dialog-titlebar-close')
+// // 		    .removeClass("ui-dialog-titlebar-close")
+// // 		    .addClass('closeButton')
+// 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+// 	    });
+	
+	$("#faqDialog").html(
             '<td>Сабдей - это день, когда стример играет в игры, предложенные сабами, соответственно игры принимаются ' +
             'только от платных подписчиков. Чтобы добавить свою игру в список, напишите в чат команду - % "название ' +
             'игры", принимается последний вариант. Игры на сабдень выбираются случайным образом из всего списка. ' +
@@ -163,34 +191,6 @@
 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
 	    }
 	});
-        
-    }
-
-    $('#subdayHistoryTable').html("<i>Список пуст</i>");
-</script>
-<!-- Run the Acordion -->
-<script>
-    $("#subdayAccordion").accordion({
-        clearStyle: true,
-        animate: "swing",
-        heightStyle: "content",
-        icons: null
-    });
-</script>
-<script>
-    $('[data-toggle="tooltip"]').tooltip({
-        trigger: 'hover'
-    });
-	
-	
-// 	$( "#faqDialog" ).on( "dialogopen", function(event, ui) {
-// 		$('.ui-dialog-titlebar-close')
-// // 		    .removeClass("ui-dialog-titlebar-close")
-// // 		    .addClass('closeButton')
-// 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-// 	    });
-	
-	
 	    
 	   
 	
