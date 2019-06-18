@@ -137,14 +137,7 @@
             '<li>Закрыто - голосование полностью закрывается до следующего сабдея.</li>' +
             '</ul></td>');
         $("#faqDialog")
-// 		.dialog({
-// 	    open: function(event, ui) {
-// 		$('.ui-dialog-titlebar-close')
-// 		    .removeClass("ui-dialog-titlebar-close")
-// 		    .addClass('closeButton')
-// 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-// 	    }
-// 	})
+
 		.dialog({
             autoOpen: true,
             height: 370,
@@ -153,14 +146,21 @@
                 effect: "blind",
                 duration: 400
             },
-// 	    hide: { 
-// 		 effect: "fadeOut", 
-// 		 duration: 400 
-// 	    },
+	    hide: { 
+		 effect: "fadeOut", 
+		 duration: 400 
+	    },
             title: 'F.A.Q.'         
 		
 		
-        });        
+        })		.dialog({
+	    open: function(event, ui) {
+		$('.ui-dialog-titlebar-close')
+		    .removeClass("ui-dialog-titlebar-close")
+		    .addClass('closeButton')
+		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+	    }
+	});        
     }
 
     $('#subdayHistoryTable').html("<i>Список пуст</i>");
