@@ -209,6 +209,12 @@
 				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
 				'</ul>');
 			$("#searchDialog").dialog({
+			    open: function(event, ui) {
+				$('.ui-dialog-titlebar-close')
+				    .removeClass("ui-dialog-titlebar-close")
+				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+			    }
+			}).dialog({
 				autoOpen: true,
 				width: 470,
 				show: {
@@ -220,6 +226,12 @@
 		} else {
 			$("#searchDialog").text('');
 			$("#searchDialog").dialog({
+			    open: function(event, ui) {
+				$('.ui-dialog-titlebar-close')
+				    .removeClass("ui-dialog-titlebar-close")
+				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+			    }
+			}).dialog({
 				autoOpen: true,
 				height: 1,
 				width: 470,
