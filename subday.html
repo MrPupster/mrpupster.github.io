@@ -171,11 +171,11 @@
     $('[data-toggle="tooltip"]').tooltip({
         trigger: 'hover'
     });
-			$(".ui-dialog").dialog({
+			$("#faqDialog").dialog({
 	    open: function(event, ui) {
 		$('.ui-dialog-titlebar-close')
-		    .removeClass("ui-dialog-titlebar-close")
-		    .addClass('closeButton')
+// 		    .removeClass("ui-dialog-titlebar-close")
+// 		    .addClass('closeButton')
 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
 	    }
 	});
