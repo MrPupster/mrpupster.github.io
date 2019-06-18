@@ -110,22 +110,14 @@
     </div>
 
     <script>
-        $('#tabs').tabs().addClass('ui-tabs-vertical ui-helper-clearfix').fadeIn(1000); //
+        $('#tabs').tabs({
+                          hide: { effect: "explode", duration: 1000 },
+                            show: { effect: "blind", duration: 800 }
+                        }).addClass('ui-tabs-vertical ui-helper-clearfix').fadeIn(1000); //
        
         TABS_INITIALIZED = true;
         $("#panelLoader").fadeOut(1000);
-        
-         $("#cmdH").slideDown();
-//                 $("#subday").slideDown();
-        
-//         $("#commandsPanel").slideDown();
-                $("#stsH").slideDown();
-        
-        $("#sbdH").slideDown();
-//                 $("#stats").slideDown();
-        
-//         $("#helpPanel").slideDown();
-                $("#hlpH").slideDown();
+
     </script>
     <!--         <script type="text/javascript" src="./js/globalPanel.js" async></script>         -->
 
