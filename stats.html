@@ -14,7 +14,7 @@
 			</div>
 			<label for="viewersList">Топ 100</label>
 <!-- 			 <span id="faqDialogStats" class="inline pull-left"></span> -->
-			<td><strong tabindex="0" class="inline pull-right dashed" id="faqDialogStats" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogStats()"> <!-- onclick="openFaqDialogStats()" -->
+			<td><strong tabindex="0" class="inline pull-right dashed" id="faqDialogStats" style="cursor: pointer; margin-left:5px" > <!-- onclick="openFaqDialogStats()" -->
 				<font size="3">F.A.Q.</font>
 			    </strong><i class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
         
@@ -44,7 +44,7 @@
 						<button type="button" class="close" data-dismiss="modal"></button>
 						<h4 class="modal-title inline pull-left">История прошлых стримов</h4>
 <!-- 						<span id="faqDialogHistory" class="inline pull-left"></span> -->
-						<td><strong tabindex="0" class="inline pull-right dashed" id="faqDialogHistory" style="cursor: pointer; margin-left:5px" onclick="openFaqDialogHistory()">
+						<td><strong tabindex="0" class="inline pull-right dashed" id="faqDialogHistory" style="cursor: pointer; margin-left:5px">
 							<font size="3">F.A.Q.</font>
 						    </strong><i class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
 					</div>
@@ -209,38 +209,32 @@
 				'<li>Дата подписки (follow) - ' + followAge + '</li><br>' +
 				'</ul>');
 			$("#searchDialog").dialog({
-			    open: function(event, ui) {
-				$('.ui-dialog-titlebar-close')
-				    .removeClass("ui-dialog-titlebar-close")
-				    .addClass('closeButton')
-				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-			    }
-			}).dialog({
 				autoOpen: true,
 				width: 470,
 				show: {
-					effect: "blind",
+					effect: "fade",
 					duration: 400
 				},
+				hide: { 
+					 effect: "fade", 
+					 duration: 400 
+			    	},
 				title: user
 			});
 		} else {
 			$("#searchDialog").text('');
 			$("#searchDialog").dialog({
-			    open: function(event, ui) {
-				$('.ui-dialog-titlebar-close')
-				    .removeClass("ui-dialog-titlebar-close")
-				    .addClass('closeButton')
-				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-			    }
-			}).dialog({
 				autoOpen: true,
 				height: 1,
 				width: 470,
 				show: {
-					effect: "blind",
+					effect: "fade",
 					duration: 400
 				},
+				hide: { 
+					 effect: "fade", 
+					 duration: 400 
+			    	},
 				title: user + ' не найден'
 			});
 		}
@@ -408,6 +402,15 @@
 			trigger: 'focus'
 // 			title: 'F.A.Q.'
 			
+		});
+		
+		$("#searchDialog").dialog({
+		    open: function(event, ui) {
+			$('.ui-dialog-titlebar-close')
+// 				    .removeClass("ui-dialog-titlebar-close")
+// 				    .addClass('closeButton')
+			    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+		    }
 		});
         });
 	
