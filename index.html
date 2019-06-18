@@ -70,17 +70,16 @@
 
     <div id="tabs" style="display:none">
          <ul>
-            <li> <a href="#commands">Команды</a> </li>
-            <li> <a href="#stats">Статистика</a> </li>
-            <li> <a href="#subday">Сабдей</a> </li>
-            <li> <a href="#help">Информация</a> </li>
+            <li> <a id="cmdH" href="#commands">Команды</a> </li>
+            <li> <a id="stsH" href="#stats">Статистика</a> </li>
+            <li> <a id="sbdH" href="#subday">Сабдей</a> </li>
+            <li> <a id="hlpH" href="#help">Информация</a> </li>
         </ul>
 
         <div role="tabpanel" class="tab-pane" id="commands">
             <div id="commandsPanel"></div>
             <script type="text/javascript">
                 $("#commandsPanel").load("commands.html");
-                $("#commands").fadeIn('slow');
             </script>
             <!-- <script type="text/javascript" src="./js/commandsPanel.js"></script>                 -->
         </div>
@@ -89,7 +88,6 @@
             <div id="subdayPanel"></div>
             <script type="text/javascript">
                 $("#subdayPanel").load("subday.html");
-                $('#subday').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/subdayPanel.js" async></script> -->
         </div>
@@ -98,7 +96,6 @@
             <div id="statsPanel"></div>
             <script type="text/javascript">
                 $("#statsPanel").load("stats.html");
-                $('#stats').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/statsPanel.js" async></script> -->
         </div>       
@@ -107,7 +104,6 @@
             <div id="helpPanel"></div>
             <script type="text/javascript">
                 $("#helpPanel").load("help.html");
-                $('#help').fadeIn('slow');
             </script>
             <!-- <script type="text/javascript" src="./js/helpPanel.js"></script> -->
         </div>
@@ -115,19 +111,21 @@
 
     <script>
         $('#tabs').tabs().addClass('ui-tabs-vertical ui-helper-clearfix').fadeIn(1000); //
-        $("#subdayPanel").slideDown();
-//                 $("#subday").slideDown();
+       
         TABS_INITIALIZED = true;
         $("#panelLoader").fadeOut(1000);
         
-//         $("#commandsPanel").slideDown();
-                $("#commands").slideDown();
+         $("#cmdH").slideDown();
+//                 $("#subday").slideDown();
         
-        $("#statsPanel").slideDown();
+//         $("#commandsPanel").slideDown();
+                $("#stsH").slideDown();
+        
+        $("#sbdH").slideDown();
 //                 $("#stats").slideDown();
         
 //         $("#helpPanel").slideDown();
-                $("#help").slideDown();
+                $("#hlpH").slideDown();
     </script>
     <!--         <script type="text/javascript" src="./js/globalPanel.js" async></script>         -->
 
