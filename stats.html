@@ -221,14 +221,6 @@
 			    	},
 				title: user
 			});
-// 			$("#searchDialog").dialog({
-// 			    open: function(event, ui) {
-// 				$('.ui-dialog-titlebar-close')
-// 	// 				    .removeClass("ui-dialog-titlebar-close")
-// 	// 				    .addClass('closeButton')
-// 				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-// 			    }
-// 			});
 		} else {
 			$("#searchDialog").text('');
 			$("#searchDialog").dialog({
@@ -245,15 +237,12 @@
 			    	},
 				title: user + ' не найден'
 			});
+		}
 // 			$("#searchDialog").dialog({
 // 			    open: function(event, ui) {
-// 				$('.ui-dialog-titlebar-close')
-// 	// 				    .removeClass("ui-dialog-titlebar-close")
-// 	// 				    .addClass('closeButton')
-// 				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+// 				$('.ui-dialog-titlebar-close').html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
 // 			    }
 // 			});
-		}
 		
 	}
 
@@ -421,6 +410,7 @@
 			
 		});
 		
+		$("#searchDialog").dialog({ autoOpen: false });
 		$('.ui-dialog-titlebar-close').html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
         });
 	
