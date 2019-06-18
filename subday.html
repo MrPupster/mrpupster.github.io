@@ -124,36 +124,15 @@
     }
 
     function openFaqDialog() {
-
-        $("#faqDialog").html(
-            '<td>Сабдей - это день, когда стример играет в игры, предложенные сабами, соответственно игры принимаются ' +
-            'только от платных подписчиков. Чтобы добавить свою игру в список, напишите в чат команду - % "название ' +
-            'игры", принимается последний вариант. Игры на сабдень выбираются случайным образом из всего списка. ' +
-            'Какие-то допольнительные требования к играм и мошна на выпавшие - на усмотрение стримера. Предлагайте ' +
-            'только годноту!' +
-            '<br><br>Голосование: <br><ul>' +
-            '<li>Открыто - идет голосование, ваши варианты игр принимаются.</li><br>' +
-            '<li>Окончено - голоса уже не принимаются, в этом статусе стример рандомит игры.</li><br>' +
-            '<li>Закрыто - голосование полностью закрывается до следующего сабдея.</li>' +
-            '</ul></td>');
-        $("#faqDialog")
-
-		.dialog({
-            autoOpen: true,
-            height: 370,
-            width: 600,
-            show: {
-                effect: "blind",
-                duration: 400
-            },
-	    hide: { 
-		 effect: "fadeOut", 
-		 duration: 400 
-	    },
-            title: 'F.A.Q.'         
-		
-		
-        });        
+	 		$("#faqDialog").dialog({
+	    open: function(event, ui) {
+		$('.ui-dialog-titlebar-close')
+// 		    .removeClass("ui-dialog-titlebar-close")
+// 		    .addClass('closeButton')
+		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+	    }
+	});
+        
     }
 
     $('#subdayHistoryTable').html("<i>Список пуст</i>");
@@ -171,14 +150,47 @@
     $('[data-toggle="tooltip"]').tooltip({
         trigger: 'hover'
     });
-			$("#faqDialog").dialog({
-	    open: function(event, ui) {
-		$('.ui-dialog-titlebar-close')
-// 		    .removeClass("ui-dialog-titlebar-close")
-// 		    .addClass('closeButton')
-		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
-	    }
-	});
+	
+	
+// 	$( "#faqDialog" ).on( "dialogopen", function(event, ui) {
+// 		$('.ui-dialog-titlebar-close')
+// // 		    .removeClass("ui-dialog-titlebar-close")
+// // 		    .addClass('closeButton')
+// 		    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
+// 	    });
+	
+	$("#faqDialog").html(
+            '<td>Сабдей - это день, когда стример играет в игры, предложенные сабами, соответственно игры принимаются ' +
+            'только от платных подписчиков. Чтобы добавить свою игру в список, напишите в чат команду - % "название ' +
+            'игры", принимается последний вариант. Игры на сабдень выбираются случайным образом из всего списка. ' +
+            'Какие-то допольнительные требования к играм и мошна на выпавшие - на усмотрение стримера. Предлагайте ' +
+            'только годноту!' +
+            '<br><br>Голосование: <br><ul>' +
+            '<li>Открыто - идет голосование, ваши варианты игр принимаются.</li><br>' +
+            '<li>Окончено - голоса уже не принимаются, в этом статусе стример рандомит игры.</li><br>' +
+            '<li>Закрыто - голосование полностью закрывается до следующего сабдея.</li>' +
+            '</ul></td>');
+        $("#faqDialog")
+
+		.dialog({
+            autoOpen: false,
+            height: 370,
+            width: 600,
+            show: {
+                effect: "blind",
+                duration: 400
+            },
+	    hide: { 
+		 effect: "fadeOut", 
+		 duration: 400 
+	    },
+            title: 'F.A.Q.',
+		appendTo: "#faqDialog"
+		
+		
+        }); 
+	    
+	   
 	
 </script>
 <script>
