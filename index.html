@@ -79,10 +79,8 @@
         <div role="tabpanel" class="tab-pane" id="commands">
             <div id="commandsPanel"></div>
             <script type="text/javascript">
-                $("#commandsPanel").load("commands.html",
-    function () {
-        $('#commandsPanel').slideDown();
-    });
+                $("#commandsPanel").load("commands.html");
+                $("#commandsPanel").slideToggle();
             </script>
             <!-- <script type="text/javascript" src="./js/commandsPanel.js"></script>                 -->
         </div>
@@ -90,10 +88,8 @@
         <div role="tabpanel" class="tab-pane" id="subday">
             <div id="subdayPanel"></div>
             <script type="text/javascript">
-                $("#subdayPanel").load("subday.html",
-    function () {
-        $('#subdayPanel').slideDown();
-    });
+                $("#subdayPanel").load("subday.html");
+                $('#subdayPanel').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/subdayPanel.js" async></script> -->
         </div>
@@ -101,10 +97,8 @@
         <div role="tabpanel" class="tab-pane" id="stats">
             <div id="statsPanel"></div>
             <script type="text/javascript">
-                $("#statsPanel").load("stats.html",
-    function () {
-        $('#statsPanel #tabs').slideDown();
-    });
+                $("#statsPanel").load("stats.html");
+                $('#statsPanel').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/statsPanel.js" async></script> -->
         </div>       
@@ -112,10 +106,8 @@
         <div role="tabpanel" class="tab-pane" id="help">
             <div id="helpPanel"></div>
             <script type="text/javascript">
-                $("#helpPanel").load("help.html",
-    function () {
-        $('#helpPanel body').slideDown();
-    });
+                $("#helpPanel").load("help.html");
+                $('#helpPanel').slideToggle();
             </script>
             <!-- <script type="text/javascript" src="./js/helpPanel.js"></script> -->
         </div>
