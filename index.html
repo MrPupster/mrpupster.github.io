@@ -80,7 +80,7 @@
             <div id="commandsPanel"></div>
             <script type="text/javascript">
                 $("#commandsPanel").load("commands.html");
-                $("#commandsPanel").fadeIn('slow');
+                $("#commands").fadeIn('slow');
             </script>
             <!-- <script type="text/javascript" src="./js/commandsPanel.js"></script>                 -->
         </div>
@@ -89,7 +89,7 @@
             <div id="subdayPanel"></div>
             <script type="text/javascript">
                 $("#subdayPanel").load("subday.html");
-                $('#subdayPanel').slideDown();
+                $('#subday').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/subdayPanel.js" async></script> -->
         </div>
@@ -98,7 +98,7 @@
             <div id="statsPanel"></div>
             <script type="text/javascript">
                 $("#statsPanel").load("stats.html");
-                $('#statsPanel').slideDown();
+                $('#stats').slideDown();
             </script>
             <!--                 <script type="text/javascript" src="./js/statsPanel.js" async></script> -->
         </div>       
@@ -107,14 +107,14 @@
             <div id="helpPanel"></div>
             <script type="text/javascript">
                 $("#helpPanel").load("help.html");
-                $('#helpPanel').fadeIn('slow');
+                $('#help').fadeIn('slow');
             </script>
             <!-- <script type="text/javascript" src="./js/helpPanel.js"></script> -->
         </div>
     </div>
 
     <script>
-        $('#tabs').tabs().addClass('ui-tabs-vertical ui-helper-clearfix').slideUp(1000); //.fadeIn(1000)
+        $('#tabs').tabs().addClass('ui-tabs-vertical ui-helper-clearfix').slideDown(1000); //.fadeIn(1000)
         TABS_INITIALIZED = true;
         $("#panelLoader").fadeOut(1000); 
     </script>
