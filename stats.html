@@ -211,7 +211,8 @@
 			$("#searchDialog").dialog({
 			    open: function(event, ui) {
 				$('.ui-dialog-titlebar-close')
-// 				    .removeClass("ui-dialog-titlebar-close")
+				    .removeClass("ui-dialog-titlebar-close")
+				    .addClass('closeButton')
 				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
 			    }
 			}).dialog({
@@ -228,7 +229,8 @@
 			$("#searchDialog").dialog({
 			    open: function(event, ui) {
 				$('.ui-dialog-titlebar-close')
-// 				    .removeClass("ui-dialog-titlebar-close")
+				    .removeClass("ui-dialog-titlebar-close")
+				    .addClass('closeButton')
 				    .html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
 			    }
 			}).dialog({
@@ -359,9 +361,7 @@
 	});
 </script>
 <script>
-	$('[data-toggle="tooltip"]').tooltip({
-		trigger: 'hover'
-	});
+	
 	
 	$(document).ready(function(){
 		
@@ -385,7 +385,7 @@
 				'переместиться в самый верх, нужно нажать на стрелку в правом нижнем углу. <br><br> ' + 
 				'Также, нажатие на строку с играми, откроет внешний сайт с подробной статистикой по конкретному стриму.</td>',
 			placement: 'left',
-			trigger: 'focus click'
+			trigger: 'focus'
 // 			title: 'F.A.Q.'
 			
 		});
@@ -405,7 +405,7 @@
 				'столбца, чтобы отсортировать данные по соответсвующему критерию. Чтобы посмотреть дату подписки (follow), ' +
 				'нажмите на порядковый номер в первом столбце.</td>',
 			placement: 'left',
-			trigger: 'focus click'
+			trigger: 'focus'
 // 			title: 'F.A.Q.'
 			
 		});
