@@ -38,7 +38,7 @@
         </td>
 
 
-        <span id="faqDialog" class="inline pull-left"></span>
+        <div id="faqDialog" class="inline pull-left"></div>
         <td><strong class="inline pull-right dashed" style="cursor: pointer; margin-left:5px" onclick="openFaqDialog()">
                 <font size="3">F.A.Q.</font>
             </strong><i class="fa fa-question inline pull-right fa-lg" style="position: relative; top: 3px" /></td>
@@ -170,7 +170,7 @@
             '<li>Окончено - голоса уже не принимаются, в этом статусе стример рандомит игры.</li><br>' +
             '<li>Закрыто - голосование полностью закрывается до следующего сабдея.</li>' +
             '</ul></td>');
-        $("#subdayGamesTable")
+        $("#faqDialog")
 
 		.dialog({
             autoOpen: false,
@@ -185,7 +185,7 @@
 		 duration: 400 
 	    },
             title: 'F.A.Q.',
-		appendTo: "#faqDialog"
+		
 		
 		
         }); 
