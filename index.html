@@ -79,7 +79,10 @@
         <div role="tabpanel" class="tab-pane" id="commands">
             <div id="commandsPanel"></div>
             <script type="text/javascript">
-                $("#commandsPanel").load("commands.html").fadeIn('slow');
+                $("#commandsPanel").load("commands.html",
+    function () {
+        $('#commandsPanel .div-to-show').slideDown();
+    });
             </script>
             <!-- <script type="text/javascript" src="./js/commandsPanel.js"></script>                 -->
         </div>
@@ -87,7 +90,10 @@
         <div role="tabpanel" class="tab-pane" id="subday">
             <div id="subdayPanel"></div>
             <script type="text/javascript">
-                $("#subdayPanel").load("subday.html").fadeIn('slow');
+                $("#subdayPanel").load("subday.html",
+    function () {
+        $('#subdayPanel .div-to-show').slideDown();
+    });
             </script>
             <!--                 <script type="text/javascript" src="./js/subdayPanel.js" async></script> -->
         </div>
@@ -95,7 +101,10 @@
         <div role="tabpanel" class="tab-pane" id="stats">
             <div id="statsPanel"></div>
             <script type="text/javascript">
-                $("#statsPanel").load("stats.html").fadeIn('slow');
+                $("#statsPanel").load("stats.html",
+    function () {
+        $('#statsPanel .div-to-show').slideDown();
+    });
             </script>
             <!--                 <script type="text/javascript" src="./js/statsPanel.js" async></script> -->
         </div>       
@@ -103,7 +112,10 @@
         <div role="tabpanel" class="tab-pane" id="help">
             <div id="helpPanel"></div>
             <script type="text/javascript">
-                $("#helpPanel").load("help.html").fadeIn('slow');
+                $("#helpPanel").load("help.html",
+    function () {
+        $('#helpPanel .div-to-show').slideDown();
+    });
             </script>
             <!-- <script type="text/javascript" src="./js/helpPanel.js"></script> -->
         </div>
