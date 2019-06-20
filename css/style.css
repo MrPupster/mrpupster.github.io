@@ -1300,17 +1300,17 @@ tr:nth-child(even) {
 	color: #ddd;
 }
 
-/* .ui-tabs .ui-tabs-nav li {
+.ui-tabs .ui-tabs-nav li {
     transform: none;
-} */
+}
 
-/* .ui-accordion .ui-state-active:first-child {
+.ui-accordion .ui-state-active:first-child {
 	margin-top: -30px !important;
-} */
+}
 
-/* .ui-accordion:first-child {
+.ui-accordion:first-child {
 	margin-top: -20px;
-} */
+}
 
 .ui-accordion .ui-state-default {
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
