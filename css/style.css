@@ -1217,7 +1217,7 @@ tr:nth-child(even) {
     background: #1f1e21;
 } */
 
-/* .form-control, .footable .form-control {
+.form-control, .footable .form-control {
     border: none;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
     background-color: #28242e !important;
@@ -1226,7 +1226,7 @@ tr:nth-child(even) {
 
 .form-control:focus {
     box-shadow: -10px 9px 21px rgba(0, 0, 0, 0.3);
-} */
+}
 
 .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
