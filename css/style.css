@@ -1322,9 +1322,9 @@ tr:nth-child(even) {
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.3) !important;
 } */
 
-/* .ui-accordion .ui-accordion-header {
+.ui-accordion .ui-accordion-header {
     padding: .8em .5em .8em .7em;
-} */
+}
 
 .footable .pagination > li > a, .footable .pagination > li > span {
     background-color: #0a0808 !important;
