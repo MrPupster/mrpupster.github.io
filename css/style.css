@@ -1205,9 +1205,9 @@ form-control {
     border-radius: 10px;
 }
 
-#customCommands {
+/* #customCommands {
     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
-}
+} */
 
 tr:nth-child(odd) {
     background: #0a0909;
