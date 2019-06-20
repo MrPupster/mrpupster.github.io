@@ -1209,13 +1209,13 @@ form-control {
     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
 } */
 
-/* tr:nth-child(odd) {
+tr:nth-child(odd) {
     background: #0a0909;
 }
 
 tr:nth-child(even) {
     background: #1f1e21;
-} */
+}
 
 .form-control, .footable .form-control {
     border: none;
