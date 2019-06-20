@@ -1,6 +1,6 @@
 
 /* Old style */
-:root {
+/* :root {
     --header-background: #6441a5;
     --main-background: #141419;
     --main-color: #6136b1;
@@ -11,9 +11,9 @@
     --ui-state-hover-border: #6136b1;
     --ui-state-hover-background: #383838;
     --hyperlinks: #6441a5;
-}
+} */
 
-/* :root {
+:root {
     --header-background: #5c3e95;
     --main-background: #141419;
     --main-color: #5c3e95;
@@ -24,7 +24,7 @@
     --ui-state-hover-border: #5c3e95;
     --ui-state-hover-background: #383838;
     --hyperlinks: #5c3e95;
-} */
+}
 
 
 
