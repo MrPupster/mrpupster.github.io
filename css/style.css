@@ -1205,9 +1205,11 @@ form-control {
     border-radius: 10px;
 }
 
-/* #customCommands {
-    box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
-} */
+#customCommands {
+/*     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06); */
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+	
+}
 
 tr:nth-child(odd) {
     background: #0a0909;
@@ -1231,7 +1233,7 @@ tr:nth-child(even) {
 .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-/*     transform: rotateY(17deg) translateY(20px); */
+    transform: rotateY(17deg) translateY(20px);
 /*     transition: all 1s cubic-bezier(0, 0, 0.2, 1) !important; */
     background: #5c3e95 !important;
     border: none; 
