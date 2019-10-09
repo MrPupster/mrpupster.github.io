@@ -385,8 +385,12 @@
 				'переместиться в самый верх, нужно нажать на стрелку в правом нижнем углу. <br><br> ' + 
 				'Также, нажатие на строку с играми, откроет внешний сайт с подробной статистикой по конкретному стриму.</td>',
 			placement: 'left',
-			trigger: 'focus'
-// 			title: 'F.A.Q.'
+			trigger: 'focus',
+// 			title: 'F.A.Q.',
+			animation: true,
+			show: function () {
+				$(this).fadeInUp();
+			    }
 			
 		});
 		
@@ -409,7 +413,7 @@
 // 			title: 'F.A.Q.',
 			animation: true,
 			show: function () {
-				$(this).shake);
+				$(this).shake();
 			    }
 			
 			
