@@ -406,13 +406,14 @@
 				'нажмите на порядковый номер в первом столбце.</td>',
 			placement: 'left',
 			trigger: 'focus',
-// 			title: 'F.A.Q.'
+// 			title: 'F.A.Q.',
+			animation: true
 			
 			
 		});
 		
 		$("#searchDialog").dialog({ autoOpen: false });
-		$("#searchDialog").addClass("animated shake");
+		$("#faqDialogStats").addClass("animated shake");
 		$('.ui-dialog-titlebar-close').html('<i class="fa fa-times fa-lg" aria-hidden="true"></i>');
         });
 	
