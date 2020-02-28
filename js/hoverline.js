@@ -10,7 +10,7 @@
 		
 		var $this = this;
 		
-// 		$this.find('ul').css('list-style','none');
+		$this.find('ul').css('list-style','none');
 		
 		$this.find('ul li').css({
 			'float'		:	'left',
