@@ -53,6 +53,8 @@
 			'width'			:	'1px',
 			'position'		:	'relative',
 			'left'			:	'1px',
+			'float' : 'left',
+			'top' : 0
 		});
 		
 		if(settings.border == "none")
