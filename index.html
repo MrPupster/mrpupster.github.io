@@ -27,6 +27,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    
+    <script type="text/javascript">
+$(document).ready(function(){
+	$('.navbar').makeNavbar();
+	/*$('.navbar').hoverline({
+		  'color'       		:		'#CCC',
+		  'height'				:		'2px',
+		  'start'				:		'2',
+		  'speed'				:		'500',
+		  'border'				:		'none',
+		  'borderwidthside'		:		'1px',
+		  'borderwidthtop'		:		'1px',
+		  'borderstyle'			:		'solid'
+	});*/
+	$('#nav1').hoverline();
+	$('#nav2').hoverline({'start' : '3'});
+	$('#nav3').hoverline({'color' : 'red'});
+	$('#nav4').hoverline({'speed' : '1000'});
+	$('#nav5').hoverline({'height': '5px'});
+	$('#nav6').hoverline({
+	  'border'		:	'red',
+	  'borderwidthside'	:	'1px',
+	  'borderwidthtop'	:	'1px',
+	  'borderstyle'		:	'solid'
+	});
+}); </script>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -69,25 +95,23 @@
     <span id="panelLoader"><i style="color: #6441a5" class="fa fa-spinner fa-spin fa-5x"></i><br><br>Загрузка
         информации</span>
     
-    <div class="navbar">
-  <ul>
-    <li><a href="#ex1">Home</a></li>
-    <li><a href="#ex1">Blog</a></li>
-    <li><a href="#ex1"><a href="https://www.jqueryscript.net/tags.php?/Portfolio/">Portfolio</a></a></li>
-    <li><a href="#ex1">Projects</a></li>
-    <li><a href="#ex1">Design</a></li>
-  </ul>
-</div>
-<script> $('.navbar').makeNavbar({
-  'color'           :   '#333',
-  'height'        :   '2px',
-  'start'       :   '1',
-  'speed'       :   '200',
-  'border'        :   'none',
-  'borderwidthside'   :   '1px',
-  'borderwidthtop'    :   '1px',
-  'borderstyle'     :   'solid'
-}); </script>
+    <div class="example" id="ex1">
+	<h2>Example 1 : <span class="desc">Default Values</span></h2>
+	<div class="ex-inner"><div class="navbar" id="nav1">
+		<ul>
+			<li><a href="#ex1">Home</a></li>
+			<li><a href="#ex1">Blog</a></li>
+			<li><a href="#ex1">Portfolio</a></li>
+			<li><a href="#ex1">Projects</a></li>
+			<li><a href="#ex1">Design</a></li>
+		</ul>
+	</div>	<!-- Navbar -->
+	<div id="code">
+<pre>	$('#nav1').hoverline();
+</pre>
+	</div></div>
+</div>	<!--Example -->
+
 
     <div id="tabs" style="display:none">
          <ul>
