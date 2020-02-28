@@ -83,7 +83,7 @@
 				}, speed);
 			}
 		
-			$this.css('position','relative');
+			$this.css('position','sticky');
 			
 			$this.append('<div style="clear:both;"></div>');
 			
