@@ -10,7 +10,7 @@
 		
 		var $this = this;
 		
-// 		$this.find('ul').css('list-style','none');
+		$this.find('ul').css('list-style','none');
 		
 		$this.find('ul li').css({
 			'float'		:	'left',
@@ -22,7 +22,7 @@
 			'padding'			:	'3px 5px'
 		});
 		
-// 		$this.append('<div style="clear:both;"></div>')
+		$this.append('<div style="clear:both;"></div>')
 		
 		return $this;
 		
@@ -85,7 +85,7 @@
 		
 			$this.css('position','relative');
 			
-// 			$this.append('<div style="clear:both;"></div>');
+			$this.append('<div style="clear:both;"></div>');
 			
 			$this.append($hoverline.clone());
 			
