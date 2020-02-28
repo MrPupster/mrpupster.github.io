@@ -41,7 +41,7 @@
 		  'borderstyle'			:		'solid'
 		}, options);
 		
-		var $hoverline = $('<div>');
+		var $hoverline = $('<span>');
 		
 		$hoverline.attr('class','hoverline');
 		$hoverline.css({
