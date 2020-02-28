@@ -31,27 +31,17 @@
     <script type="text/javascript">
 $(document).ready(function(){
 	$('.navbar').makeNavbar();
-	/*$('.navbar').hoverline({
-		  'color'       		:		'#CCC',
-		  'height'				:		'2px',
+	$('.navbar').hoverline({
+		  'color'       		:		'#5c3e95',
+		  'height'				:		'5px',
 		  'start'				:		'2',
 		  'speed'				:		'500',
 		  'border'				:		'none',
 		  'borderwidthside'		:		'1px',
 		  'borderwidthtop'		:		'1px',
 		  'borderstyle'			:		'solid'
-	});*/
-	$('#nav1').hoverline();
-	$('#nav2').hoverline({'start' : '3'});
-	$('#nav3').hoverline({'color' : 'red'});
-	$('#nav4').hoverline({'speed' : '1000'});
-	$('#nav5').hoverline({'height': '5px'});
-	$('#nav6').hoverline({
-	  'border'		:	'red',
-	  'borderwidthside'	:	'1px',
-	  'borderwidthtop'	:	'1px',
-	  'borderstyle'		:	'solid'
 	});
+	
 }); </script>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -97,7 +87,7 @@ $(document).ready(function(){
     
     <div class="example" id="ex1">
 	<h2>Example 1 : <span class="desc">Default Values</span></h2>
-	<div class="ex-inner"><div class="navbar" id="nav1">
+	<div class="navbar">
 		<ul>
 			<li><a href="#ex1">Home</a></li>
 			<li><a href="#ex1">Blog</a></li>
@@ -106,11 +96,7 @@ $(document).ready(function(){
 			<li><a href="#ex1">Design</a></li>
 		</ul>
 	</div>	<!-- Navbar -->
-	<div id="code">
-<pre>	$('#nav1').hoverline();
-</pre>
-	</div></div>
-</div>	<!--Example -->
+
 
 
     <div id="tabs" style="display:none">
