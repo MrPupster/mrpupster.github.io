@@ -84,7 +84,7 @@
 			}
 		
 			$this.css({'position' : 'sticky',
-			'float' : 'left',
+			'float' : 'right',
 			'top' : 0});
 			
 			$this.append('<div style="clear:both;"></div>');
