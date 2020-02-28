@@ -95,13 +95,13 @@
 					
 			var speed = parseInt(settings.speed);
 					
-			$this.find('ul li a').bind('click',clickedItem);
+			$this.find('ul#timeline-menu li a').bind('click',clickedItem);
 			
-			$this.find('ul li a').bind('mouseenter',moveHover);
+			$this.find('ul#timeline-menu li a').bind('mouseenter',moveHover);
 			
 			$this.bind('mouseleave',leaveHover);
 			
-			$this.find('ul li a').eq(settings.start-1).addClass('currElement');
+			$this.find('ul#timeline-menu li a').eq(settings.start-1).addClass('currElement');
 			
 			$this.trigger('mouseleave');
 		
