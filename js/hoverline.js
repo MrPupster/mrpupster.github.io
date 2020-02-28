@@ -52,9 +52,7 @@
 			'border-width'	:	settings.borderwidthtop + ' ' + settings.borderwidthside,
 			'width'			:	'1px',
 			'position'		:	'relative',
-			'left'			:	'1px',
-			'float' : 'left',
-			'top' : 0
+			'left'			:	'1px'
 		});
 		
 		if(settings.border == "none")
@@ -85,7 +83,9 @@
 				}, speed);
 			}
 		
-			$this.css('position','sticky');
+			$this.css({'position' : 'sticky',
+			'float' : 'left',
+			'top' : 0});
 			
 			$this.append('<div style="clear:both;"></div>');
 			
