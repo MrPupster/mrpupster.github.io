@@ -51,7 +51,7 @@
 			'border-style'	:	settings.borderstyle,
 			'border-width'	:	settings.borderwidthtop + ' ' + settings.borderwidthside,
 			'width'			:	'1px',
-			'position'		:	'absolute',
+			'position'		:	'relative',
 			'left'			:	'1px',
 		});
 		
