@@ -162,7 +162,7 @@
 		xhrStreamHistory.onreadystatechange = function () {
 			if (xhrStreamHistory.readyState === 4 && xhrStreamHistory.status == "200") {
 				var streamHistory = JSON.parse(this.responseText);				
-				$("#list0").albeTimeline(streamHistory, {effect: 'bounce', formatDate: 'd MMM' });
+				$("#list0").albeTimeline(streamHistory, {effect: 'bounceIn', formatDate: 'd MMM' });
 				
 			}
 
