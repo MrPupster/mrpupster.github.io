@@ -17,7 +17,7 @@
 			'margin'	:	'0px 10px'
 		});
 		
-		$this.find('ul li a').css({
+		$this.find('ul li a.scrollto').css({
 			'text-decoration'	:	'none',
 			'padding'			:	'3px 5px',
 			'color' : 'pink'
@@ -96,13 +96,13 @@
 					
 			var speed = parseInt(settings.speed);
 					
-			$this.find('ul li a.scrollto').bind('click',clickedItem);
+			$this.find('ul li a').bind('click',clickedItem);
 			
-			$this.find('ul li a.scrollto').bind('mouseenter',moveHover);
+			$this.find('ul li a').bind('mouseenter',moveHover);
 			
 			$this.bind('mouseleave',leaveHover);
 			
-			$this.find('ul li a.scrollto').eq(settings.start-1).addClass('currElement');
+			$this.find('ul li a').eq(settings.start-1).addClass('currElement');
 			
 			$this.trigger('mouseleave');
 		
