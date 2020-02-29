@@ -69,11 +69,13 @@
 					'left'	:	$link.position().left,
 					'width'	:	$link.parent().width()
 				}, speed);
+				$(this).parent().parent().parent().find('.hoverline').css({'background' : 'pink'});
 			}
 			
 			function clickedItem(){
 				$(this).parent().parent().parent().find('ul li a.currElement').removeClass('currElement');
 				$(this).addClass('currElement');
+				$(this).css({'color' : 'red'});
 			}
 			
 			function leaveHover(){
@@ -82,6 +84,7 @@
 					'left'	:	$link.position().left,
 					'width'	:	$link.parent().width()
 				}, speed);
+				$(this).css({'background' : 'orange'});
 			}
 		
 			$this.css({'position' : 'sticky',
