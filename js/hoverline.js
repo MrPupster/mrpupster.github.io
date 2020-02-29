@@ -17,7 +17,7 @@
 			'margin'	:	'0px 10px'
 		});
 		
-		$this.find('ul li a.scrollto').css({
+		$this.find('ul li a').css({
 			'text-decoration'	:	'none',
 			'padding'			:	'3px 5px',
 			'color' : 'pink'
@@ -72,12 +72,12 @@
 			}
 			
 			function clickedItem(){
-				$(this).parent().parent().parent().find('ul li a.scrollto.currElement').removeClass('currElement');
+				$(this).parent().parent().parent().find('ul li a.currElement').removeClass('currElement');
 				$(this).addClass('currElement');
 			}
 			
 			function leaveHover(){
-				$link = $(this).find('ul li a.scrollto.currElement');
+				$link = $(this).find('ul li a.currElement');
 				$(this).find('.hoverline').stop().animate({
 					'left'	:	$link.position().left,
 					'width'	:	$link.parent().width()
