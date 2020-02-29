@@ -84,7 +84,7 @@
 					'left'	:	$link.position().left,
 					'width'	:	$link.parent().width()
 				}, speed);
-				$(this).css({'color' : 'orange'});
+				$(this).find('.hoverline').css({'background' : 'orange'});
 			}
 		
 			$this.css({'position' : 'sticky',
