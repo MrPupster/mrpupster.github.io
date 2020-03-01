@@ -1255,13 +1255,13 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-    background: #1f1e21;
+    background: #18181d;
 }
 
 .form-control, .footable .form-control {
     border: none;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
-    background-color: #262629ad !important;
+    background-color: #26262978 !important;
     margin-right: 10px;
 }
 
@@ -1281,7 +1281,7 @@ tr:nth-child(even) {
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
     margin-top: 10px;
     border-radius: 10px;
-    background: #25202d;
+    background: #1e1e27;
     border: none;
     transition: all .5s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -1299,7 +1299,7 @@ tr:nth-child(even) {
 }
 
 .btn-primary:hover {
-    background: #36323d !important;
+    background: #323240 !important;
     color: #ddd !important;
 }
 
@@ -1334,7 +1334,7 @@ tr:nth-child(even) {
 }
 
 .dropdown-toggle:hover {
-	background: #36323d !important;
+	background: #323240 !important;
 }
 
 .caret {
