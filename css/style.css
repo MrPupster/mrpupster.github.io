@@ -1337,6 +1337,14 @@ tr:nth-child(even) {
 	background: #323240 !important;
 }
 
+.dropdown-toggle:active {
+	background: red !important;
+}
+
+.dropdown-toggle:focus {
+	background: green !important;
+}
+
 .caret {
 	color: #ddd;
 }
