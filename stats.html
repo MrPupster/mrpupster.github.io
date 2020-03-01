@@ -70,10 +70,10 @@
 	if (!modalOpened) {
 		$("#historyModal").on('shown.bs.modal', function(){			
 			modalOpened = true;
-			console.log('Mod1: 'modalOpened);
+			console.log('Mod1: ' + modalOpened);
 		});
 	}
-	console.log('Mod2: 'modalOpened);
+	console.log('Mod2: ' + modalOpened);
 	var xhrStreamStatus = new XMLHttpRequest();
 
 	xhrStreamStatus.onreadystatechange = function () {
