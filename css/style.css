@@ -48,6 +48,10 @@
     }
 }
 
+.animatedTest {
+    opacity: 0
+}
+
 .test {
     opacity: 0;
     animation-name: test;
