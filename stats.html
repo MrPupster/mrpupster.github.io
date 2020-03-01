@@ -66,6 +66,7 @@
 </div>
 
 <script type="text/javascript">
+	var modalOpened = false;
 	var xhrStreamStatus = new XMLHttpRequest();
 
 	xhrStreamStatus.onreadystatechange = function () {
@@ -170,9 +171,13 @@
 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
 // 	}
-	$("#historyModal").on('shown.bs.modal', function(){
-	   alert("Hello World!");
+	if (!modalOpened) {
+		$("#historyModal").on('shown.bs.modal', function(){
+	   	alert("Hello World!");
+		modalOpened = true;
 	});
+	}
+	
 
 	function searchViewer() {
 		var name = $('#viewerName').val().trim().toLowerCase();
