@@ -26,7 +26,33 @@
     --hyperlinks: #5c3e95;
 }
 
+@keyframes test {
+    from {
+        transform: translate3d(0,40px,0)
+    }
 
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes test {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.test {
+    opacity: 0;
+    animation-name: test;
+    -webkit-animation-name: test;
+}
 
 .fa-4x {
     font-size: 2em;
