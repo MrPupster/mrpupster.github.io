@@ -1304,12 +1304,12 @@ tr:nth-child(even) {
 }
 
 .btn-primary.focus, .btn-primary:focus {
-    background: #322e39 !important;
+    background: #2d2d3a !important;
     color: #ccc;
 }
 
 .btn-primary:active, .btn-primary.active {
-    background: #322e39 !important;
+    background: #2d2d3a !important;
     box-shadow: none !important;
 }
 
