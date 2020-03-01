@@ -67,6 +67,12 @@
 
 <script type="text/javascript">
 	var modalOpened = false;
+	if (!modalOpened) {
+		$("#historyModal").on('shown.bs.modal', function(){			
+			modalOpened = true;
+			console.log(modalOpened);
+		});
+	}
 	var xhrStreamStatus = new XMLHttpRequest();
 
 	xhrStreamStatus.onreadystatechange = function () {
@@ -171,12 +177,7 @@
 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
 // 	}
-	if (!modalOpened) {
-		$("#historyModal").on('shown.bs.modal', function(){
-	   	alert("Hello World!");
-		modalOpened = true;
-	});
-	}
+	
 	
 
 	function searchViewer() {
