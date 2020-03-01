@@ -1338,11 +1338,11 @@ tr:nth-child(even) {
 }
 
 .dropdown-toggle:active {
-	background: red !important;
+	background: #2d2d3a !important;
 }
 
 .dropdown-toggle:focus {
-	background: green !important;
+	background: #2d2d3a !important;
 }
 
 .caret {
