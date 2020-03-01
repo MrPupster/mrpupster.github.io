@@ -170,6 +170,9 @@
 		xhrStreamHistory.open("GET", "./json/streamHistory.json", true);
 		xhrStreamHistory.send();
 // 	}
+	$("#historyModal").on('shown.bs.modal', function(){
+	   alert("Hello World!");
+	});
 
 	function searchViewer() {
 		var name = $('#viewerName').val().trim().toLowerCase();
