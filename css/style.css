@@ -785,23 +785,24 @@ td {
 }
 
 .tooltip-inner {
-    background-color: #444488;
-    color: #eee;
+    background: rgb(28, 28, 36);
+    color: #ccc;
+    box-shadow: -10px 9px 21px rgba(0, 0, 0, 0.3);
 }
 .tooltip.top .tooltip-arrow {
-    border-top-color: #444488;
+    border-top-color: rgb(28, 28, 36);
 }
 
 .tooltip.right .tooltip-arrow {
-    border-right-color: #444488;
+    border-right-color: rgb(28, 28, 36)8;
 }
 
 .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: #444488;
+    border-bottom-color: rgb(28, 28, 36);
 }
 
 .tooltip.left .tooltip-arrow {
-    border-left-color: #444488;
+    border-left-color: rgb(28, 28, 36);
 }
 
 input, textarea {
