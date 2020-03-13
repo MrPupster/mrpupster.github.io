@@ -1336,8 +1336,8 @@ tr:nth-child(even) {
 
 .dropdown-toggle {
 	background: #2d2d3a !important;
-	padding-top: 7px;
-    	padding-bottom: 7px;
+	padding-top: 7px !important;
+    	padding-bottom: 7px !important;
 }
 
 .dropdown-toggle:hover {
@@ -1455,7 +1455,7 @@ tr:nth-child(even) {
     border: none;
     color: #ddd;;
     outline: none;
-    margin: -11px 7px 0 0;
+    margin: -11px 7px 0 0 !important;
 }
 
 .fa:focus {
