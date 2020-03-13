@@ -1328,10 +1328,12 @@ tr:nth-child(even) {
 
 .footable .btn-primary:active {
     color: #ddd;
+    background: none !important;
 }
 
 .footable .btn-primary:focus {
     color: #ddd;
+    background: none !important;
 }
 
 .dropdown-toggle {
