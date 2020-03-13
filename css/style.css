@@ -704,6 +704,8 @@ td {
 /*     width: 12em; */
     border-style: none;
     background: none;
+    border-radius: 0;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.4);
 }
 .ui-tabs-vertical .ui-tabs-nav li {
     clear: left;
@@ -1264,6 +1266,7 @@ tr:nth-child(even) {
     box-shadow: 0 6px 20px -5px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.06);
     background-color: #26262978 !important;
     margin-right: 10px;
+    left: 37px;
 }
 
 .form-control:focus {
@@ -1316,6 +1319,7 @@ tr:nth-child(even) {
 
 .footable .btn-primary {
     color: #ddd;
+    background: transparent !important;
 }
 
 .footable .btn-primary:hover {
@@ -1332,6 +1336,8 @@ tr:nth-child(even) {
 
 .dropdown-toggle {
 	background: #2d2d3a !important;
+	padding-top: 7px;
+    	padding-bottom: 7px;
 }
 
 .dropdown-toggle:hover {
@@ -1449,6 +1455,7 @@ tr:nth-child(even) {
     border: none;
     color: #ddd;;
     outline: none;
+    margin: -11px 7px 0 0;
 }
 
 .fa:focus {
