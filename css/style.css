@@ -1318,7 +1318,7 @@ tr:nth-child(even) {
 }
 
 .footable .btn-primary {
-    color: #ddd;
+    color: #ccc !important;
     background: transparent !important;
 }
 
